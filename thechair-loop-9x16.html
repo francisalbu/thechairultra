@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Chair — loop 9:16</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- Outfit: apenas digitos/simbolos (a Codec Warm trial nao os tem) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800;900&text=0123456789.%2C%3A%25%2B%2F&display=swap" />
+<style>
+  @font-face { font-family: "Codec Pro"; src: url("fonts/Codec-Warm-Bold-trial.ttf") format("truetype"); font-weight: 700; }
+  @font-face { font-family: "Codec Pro"; src: url("fonts/Codec-Warm-ExtraBold-trial.ttf") format("truetype"); font-weight: 800; }
+  @font-face { font-family: "Codec Pro"; src: url("fonts/Codec-Warm-Heavy-trial.ttf") format("truetype"); font-weight: 900; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: #0a0a0a; overflow: hidden; font-family: "Codec Pro", Outfit, sans-serif; }
+  body { display: grid; place-items: center; }
+  canvas { height: 100vh; width: auto; aspect-ratio: 9 / 16; max-width: 100vw; display: block; background: #000; }
+  .ui { position: fixed; left: 16px; bottom: 16px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; z-index: 5; opacity: .45; transition: opacity .2s; }
+  .ui:hover { opacity: 1; }
+  .ui.hide { display: none; }
+  .ui button { font: inherit; font-size: 12px; padding: 9px 14px; border-radius: 999px; border: 1px solid #444; background: #151515; color: #eee; cursor: pointer; }
+  .ui button:hover { background: #fffe00; color: #000; border-color: #fffe00; }
+  .ui span { font-size: 12px; color: #aaa; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<div class="ui" id="ui">
+  <button id="replay">Replay (space)</button>
+  <button id="rec">Record video (R)</button>
+  <button id="hideui">Hide controls (H)</button>
+  <span id="status"></span>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <path id="meas" d="M300 120 C360 80 450 90 500 140 S560 270 510 330 S400 410 340 380 S270 330 220 370 S110 410 70 340 S70 220 120 160 S240 150 300 120 Z"/>
+</svg>
+
+<script>
+(function () {
+  // ================= CONFIG =================
+  var W = 1080, H = 1920;
+  var LOOP_D = "M300 120 C360 80 450 90 500 140 S560 270 510 330 S400 410 340 380 S270 330 220 370 S110 410 70 340 S70 220 120 160 S240 150 300 120 Z";
+  var SCALE = 1.9, CX = 540, CY = 900;          // posicao/tamanho do loop no ecra
+  var N = 28;                                    // atletas
+  var LAP = 4.2;                                 // segundos por volta (media)
+  var WAVES = [5.5, 7.5, 9.5, 11.5, 13.5, 15.5, 17.5];   // "horas": quando saem atletas
+  var LEFT  = [22, 16, 11, 7, 4, 2, 1];                  // atletas que restam depois de cada hora
+  var END_CARD = 21.0, T_TOTAL = 26.0;
+  var YEL = "255,254,0", BONE = "241,240,234";
+
+  var cv = document.getElementById("c"), ctx = cv.getContext("2d");
+  var FONT = '"Codec Pro", Outfit, "Helvetica Neue", Arial, sans-serif';
+
+  // ================= GEOMETRIA =================
+  var meas = document.getElementById("meas"), total = meas.getTotalLength(), LUT = [], LN = 2400, i;
+  for (i = 0; i <= LN; i++) { var p = meas.getPointAtLength(total * i / LN); LUT.push([CX + (p.x - 305) * SCALE, CY + (p.y - 245) * SCALE]); }
+  function pt(s) {
+    s = ((s % 1) + 1) % 1; var f = s * LN, a = Math.floor(f), k = f - a, A = LUT[a], B = LUT[a + 1] || LUT[0];
+    return [A[0] + (B[0] - A[0]) * k, A[1] + (B[1] - A[1]) * k];
+  }
+  var path2d = new Path2D(LOOP_D);
+  var START = pt(0);
+
+  // ================= ATLETAS =================
+  var seed = 7; function rnd() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+  var ath = [];
+  for (i = 0; i < N; i++) ath.push({ v: .88 + rnd() * .24, off: -i * .0016, die: null });
+  // ordem de saida (o atleta 0 e o sobrevivente)
+  var order = []; for (i = 1; i < N; i++) order.push(i);
+  for (i = order.length - 1; i > 0; i--) { var j = Math.floor(rnd() * (i + 1)), t = order[i]; order[i] = order[j]; order[j] = t; }
+  var removed = 0;
+  WAVES.forEach(function (wt, w) {
+    var toRemove = (w === 0 ? N : LEFT[w - 1]) - LEFT[w];
+    for (var q = 0; q < toRemove; q++) ath[order[removed++]].die = wt + rnd() * .45;
+  });
+
+  // ================= HELPERS =================
+  function clamp(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
+  function ease(x) { x = clamp(x); return x * x * (3 - 2 * x); }
+  function fade(t, a, b) { return ease((t - a) / (b - a)); }
+  function text(str, x, y, size, weight, color, alpha, spacing, align) {
+    if (alpha <= 0) return;
+    ctx.save(); ctx.globalAlpha = alpha; ctx.fillStyle = color; ctx.textAlign = align || "center"; ctx.textBaseline = "middle";
+    ctx.font = weight + " " + size + "px " + FONT;
+    if ("letterSpacing" in ctx) ctx.letterSpacing = (spacing || 0) + "px";
+    ctx.fillText(str, x, y); ctx.restore();
+  }
+  function dot(x, y, r, glow, alpha, col) {
+    col = col || YEL;
+    if (glow) { var g = ctx.createRadialGradient(x, y, 0, x, y, glow); g.addColorStop(0, "rgba(" + col + "," + (.55 * alpha) + ")"); g.addColorStop(.4, "rgba(" + col + "," + (.16 * alpha) + ")"); g.addColorStop(1, "rgba(" + col + ",0)"); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, glow, 0, 7); ctx.fill(); }
+    ctx.fillStyle = "rgba(" + col + "," + alpha + ")"; ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fill();
+  }
+
+  // ================= FRAME =================
+  function draw(t) {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+    var vg = ctx.createRadialGradient(W / 2, CY, 120, W / 2, CY, 1100); vg.addColorStop(0, "rgba(255,255,255,.045)"); vg.addColorStop(1, "rgba(0,0,0,0)");
+    ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
+
+    // loop + ecos
+    var intro = fade(t, 0, 1.2);
+    ctx.save(); ctx.strokeStyle = "rgb(" + BONE + ")";
+    [[1.30, .04], [1.24, .06], [1.18, .08], [1.12, .12], [1.06, .18], [1, .7]].forEach(function (e) {
+      ctx.save(); ctx.globalAlpha = e[1] * intro;
+      ctx.translate(CX, CY); ctx.scale(SCALE * e[0], SCALE * e[0]); ctx.translate(-300, -245);
+      ctx.lineWidth = 1.5 / (SCALE * e[0]); ctx.stroke(path2d); ctx.restore();
+    });
+    ctx.restore();
+
+    // START + pulsos a cada "hora"
+    text("START", START[0], START[1] - 50, 26, 700, "rgb(" + BONE + ")", .35 * intro, 8);
+    [0.2].concat(WAVES).forEach(function (h) {
+      var p = (t - h) / 1.5;
+      if (p > 0 && p < 1) { ctx.save(); ctx.strokeStyle = "rgba(" + YEL + "," + (.6 * (1 - p)) + ")"; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(START[0], START[1], 12 + 110 * ease(p), 0, 7); ctx.stroke(); ctx.restore(); }
+    });
+
+    // atletas
+    var alive = 0, tr = 18, lastWave = WAVES[WAVES.length - 1] + .6;
+    ath.forEach(function (a, idx) {
+      var a0 = a.die === null ? 1 : 1 - clamp((t - a.die) / .9);
+      if (a.die === null || t < a.die) alive++;
+      a0 *= intro; if (a0 <= 0) return;
+      var s = a.off + a.v * Math.max(t - .2, 0) / LAP, surv = idx === 0, boost = surv ? fade(t, lastWave, lastWave + 1.5) : 0;
+      for (var k = tr; k >= 1; k--) {
+        var q = pt(s - k * .0036 * a.v), f = 1 - k / tr;
+        dot(q[0], q[1], 1 + 4 * f, 0, a0 * f * (surv ? .7 : .5));
+      }
+      var h = pt(s), shrink = a.die !== null && t > a.die ? 1 - .5 * clamp((t - a.die) / .9) : 1;
+      dot(h[0], h[1], (6 + 3 * boost) * shrink, 24 + 22 * boost, a0, surv && boost > 0 ? YEL : YEL);
+      if (surv) dot(h[0], h[1], 2.5 + boost, 0, a0, "255,255,255");
+    });
+
+    // contador no centro
+    var cAlpha = fade(t, 1, 2) * (1 - fade(t, END_CARD - .4, END_CARD + .4));
+    var lastChange = 0; WAVES.forEach(function (w) { if (t >= w) lastChange = w; });
+    var pop = 1 + .12 * Math.max(0, 1 - (t - lastChange) / .4) * (lastChange ? 1 : 0);
+    ctx.save(); ctx.translate(W / 2, CY); ctx.scale(pop, pop); ctx.translate(-W / 2, -CY);
+    text(String(alive), W / 2, CY - 10, 250, 900, "rgb(" + BONE + ")", cAlpha, -6);
+    ctx.restore();
+    text(alive === 1 ? "ONE LEFT" : "ATHLETES LEFT", W / 2, CY + 140, 30, 700, "rgb(" + BONE + ")", .5 * cAlpha, 10);
+
+    // hora atual
+    var hour = 1; WAVES.forEach(function (w) { if (t >= w) hour++; });
+    text("HOUR " + (hour < 10 ? "0" : "") + hour, W / 2, 1290, 36, 800, "rgb(" + YEL + ")", .85 * cAlpha, 10);
+
+    // texto do guiao (topo)
+    var topOut = 1 - fade(t, END_CARD - .6, END_CARD);
+    text("6.7 KM,",       W / 2, 250, 112, 800, "rgb(" + BONE + ")", fade(t, .3, 1.0) * topOut, -3);
+    text("ON THE HOUR,",  W / 2, 365, 112, 800, "rgb(" + BONE + ")", fade(t, 1.1, 1.8) * topOut, -3);
+    text("EVERY HOUR.",   W / 2, 480, 112, 800, "rgb(" + YEL + ")",  fade(t, 1.9, 2.6) * topOut, -3);
+
+    // texto do guiao (fundo)
+    var botIn = fade(t, 13.2, 14.4);
+    text("UNTIL ONE PERSON", W / 2, 1450, 84, 800, "rgb(" + BONE + ")", botIn, -2);
+    text("REMAINS.",         W / 2, 1545, 84, 800, "rgb(" + YEL + ")", fade(t, 14.2, 15.4), -2);
+
+    // cartao final
+    var end = fade(t, END_CARD, END_CARD + 1);
+    text("THE CHAIR", W / 2, 300, 140, 900, "rgb(" + BONE + ")", end, -4);
+    text("@THECHAIRULTRA", W / 2, 410, 40, 800, "rgb(" + YEL + ")", end, 8);
+  }
+
+  // ================= PLAYER / RECORDER =================
+  var t0 = performance.now(), recording = false, recorder = null, chunks = [], statusEl = document.getElementById("status");
+  function restart() { t0 = performance.now(); }
+  function frame() {
+    var t = (performance.now() - t0) / 1000; if (t > T_TOTAL) t = T_TOTAL;
+    draw(t);
+    if (recording && t >= T_TOTAL) stopRec();
+    requestAnimationFrame(frame);
+  }
+  function startRec() {
+    if (recording) return;
+    var types = ["video/mp4;codecs=avc1", "video/webm;codecs=vp9", "video/webm"], mime = "";
+    for (var k = 0; k < types.length; k++) if (window.MediaRecorder && MediaRecorder.isTypeSupported(types[k])) { mime = types[k]; break; }
+    if (!mime) { statusEl.textContent = "This browser can't record. Use Chrome, or screen-record."; return; }
+    chunks = []; recorder = new MediaRecorder(cv.captureStream(60), { mimeType: mime, videoBitsPerSecond: 16000000 });
+    recorder.ondataavailable = function (e) { if (e.data.size) chunks.push(e.data); };
+    recorder.onstop = function () {
+      var blob = new Blob(chunks, { type: mime }), a = document.createElement("a");
+      a.href = URL.createObjectURL(blob); a.download = "the-chair-loop-9x16." + (mime.indexOf("mp4") > -1 ? "mp4" : "webm"); a.click();
+      statusEl.textContent = "Saved."; recording = false;
+    };
+    recording = true; statusEl.textContent = "Recording… keep this tab in front."; restart(); recorder.start();
+  }
+  function stopRec() { if (recorder && recorder.state !== "inactive") recorder.stop(); }
+
+  document.getElementById("replay").onclick = restart;
+  document.getElementById("rec").onclick = startRec;
+  document.getElementById("hideui").onclick = function () { document.getElementById("ui").classList.add("hide"); };
+  addEventListener("keydown", function (e) {
+    if (e.code === "Space") { e.preventDefault(); restart(); }
+    if (e.key === "r" || e.key === "R") startRec();
+    if (e.key === "h" || e.key === "H") document.getElementById("ui").classList.toggle("hide");
+  });
+
+  var loads = [document.fonts.load('900 100px "Codec Pro"'), document.fonts.load('800 100px "Codec Pro"'), document.fonts.load('700 100px "Codec Pro"'),
+               document.fonts.load('900 100px Outfit', "0123456789"), document.fonts.load('800 100px Outfit', "0123456789")];
+  Promise.all(loads).catch(function () {}).then(function () { restart(); frame(); });
+})();
+</script>
+</body>
+</html>
