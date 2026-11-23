@@ -36,7 +36,7 @@
     "What sets us apart": "O que nos distingue",
     "Up until now, last person standing races only had 2 possible conclusions. <b>Last Person Standing</b> and <b>DNF</b> (did not finish).": "Até agora, as corridas last person standing tinham apenas 2 desfechos possíveis. <b>Last Person Standing</b> e <b>DNF</b> (did not finish).",
     "The Chair Ultra races provide a mental stimulus for runners to keep on going.": "As corridas The Chair Ultra dão aos atletas um estímulo mental para continuarem.",
-    "Introducing the DNL<sup>*</sup>": "Apresentamos o DNL<sup>*</sup>",
+    "Introducing the DNL<small>(Did not leave)</small>": "Apresentamos o DNL<small>(Did not leave)</small>",
     "*Did not Leave": "*Did not Leave (não saiu)",
     "You stayed in the comfort of the chair and didn't go to the corral.": "Ficaste no conforto da cadeira e não foste para o corral.",
     "Runners who did not leave ring the quitting bell, seated in the chair at the start of the corral.": "Quem não sai toca o sino da desistência, sentado na cadeira à entrada do corral.",
