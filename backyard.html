@@ -819,6 +819,11 @@
     .nav-dd-logo { display: block; position: relative; overflow: hidden; width: 100%; aspect-ratio: 1380 / 300; }
     .nav-dd-logo img { position: absolute; left: -24.5%; top: 50%; width: 145%; height: auto; transform: translateY(-50%); }
     .hq-tag { font-family: "Codec Num", "Codec Pro", "Helvetica Neue", Arial, sans-serif !important; font-weight: 400 !important; color: #fffe00; white-space: nowrap; }
+    /* waitlist em passos */
+    .wl-step { display: grid; grid-template-rows: 0fr; opacity: 0; transform: translateY(10px); transition: grid-template-rows .5s var(--ease), opacity .45s var(--ease), transform .45s var(--ease); pointer-events: none; }
+    .wl-step > .wl-step-in { overflow: hidden; min-height: 0; }
+    .wl-step.on { grid-template-rows: 1fr; opacity: 1; transform: none; pointer-events: auto; }
+    .wl-step.on > .wl-step-in { overflow: visible; }
   </style>
   <script>document.documentElement.classList.add("js");</script>
 <script>window.POSTHOG_KEY = "phc_u4gX6nLBo4jYoRSVy8Cw829Xd5bKxY3a64ZGH3YacKXt"; window.POSTHOG_HOST = "https://eu.i.posthog.com";</script>
@@ -963,11 +968,14 @@
             <label class="wl-opt"><input type="radio" name="modality" value="endurance:crew4" /><span><i>.</i>crews</span></label>
           </div>
         </fieldset>
+        <div class="wl-step" data-step="2" inert><div class="wl-step-in">
         <div class="field-row">
           <div class="field"><input type="text" id="s-first" name="first_name" placeholder="First name" required maxlength="60" autocomplete="given-name" autocapitalize="words" aria-label="First name" /></div>
           <div class="field"><input type="text" id="s-last" name="last_name" placeholder="Last name" required maxlength="60" autocomplete="family-name" autocapitalize="words" aria-label="Last name" /></div>
         </div>
         <div class="field"><input type="email" id="s-email" name="email" placeholder="Your email" required autocomplete="email" inputmode="email" aria-label="Your email" /></div>
+        </div></div>
+        <div class="wl-step" data-step="3" inert><div class="wl-step-in">
         <div class="field sel">
           <select id="s-gender" name="gender" required aria-label="Gender">
             <option value="" selected disabled>Gender</option>
@@ -997,6 +1005,7 @@
         </div>
         <input type="text" id="s-hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
         <button type="submit" class="btn btn-solid" id="s-btn" style="margin-top:10px"><span>Sign up</span></button>
+        </div></div>
         <p class="fine" id="s-error" style="display:none;color:#ff6b6b"></p>
       </form>
       <div class="done" id="s-done">
@@ -1239,5 +1248,17 @@
     window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
+  <script>
+    (function () {
+      var f = document.getElementById("signup"); if (!f) return;
+      var s2 = f.querySelector('[data-step="2"]'), s3 = f.querySelector('[data-step="3"]');
+      var em = document.getElementById("s-email"), fn = document.getElementById("s-first"), ln = document.getElementById("s-last");
+      var show = function (el, focus) { if (el.classList.contains("on")) return; el.classList.add("on"); el.removeAttribute("inert"); if (focus) setTimeout(function () { try { focus.focus({ preventScroll: true }); } catch (e) {} }, 350); };
+      f.addEventListener("change", function (e) { if (e.target.name === "modality") show(s2, fn); });
+      var chk = function () { if (fn.value.trim() && ln.value.trim() && em.value.trim() && em.checkValidity()) show(s3); };
+      [fn, ln, em].forEach(function (i) { i.addEventListener("input", chk); i.addEventListener("blur", chk); });
+      if (f.querySelector('input[name="modality"]:checked')) show(s2);
+    })();
+  </script>
 </body>
 </html>
