@@ -9,3 +9,5 @@ corrida.png
 node_modules/
 
 .vercel
+.posthog/
+.claude/
