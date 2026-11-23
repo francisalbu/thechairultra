@@ -77,11 +77,16 @@
     "Do I need to be an ultra runner?": "Preciso de ser ultramaratonista?",
     "No. You only need to be able to run 6.7 km in under an hour. How far you go after that depends on how long you refuse to quit.":
       "Não. Só precisas de conseguir correr 6,7 km em menos de uma hora. Até onde vais depois disso depende de quanto tempo te recusas a desistir.",
-    "What is the DNT?": "O que é o DNT?",
-    "Did Not Try. If you stay at the base or turn around right after the start line, you'll sit in our chair and receive a DNT.":
-      "Did Not Try (não tentou). Se ficares na base ou voltares para trás logo depois da linha de partida, sentas-te na nossa cadeira e recebes um DNT.",
+    "What is a DNL?": "O que é um DNL?",
+    "Did Not Leave. When the bell rings, you either don't start the next loop, or you start it and turn back after the first 20 metres. The chair took you out.": "Did Not Leave. Quando o sino toca, ou não começas a volta seguinte, ou começas e voltas para trás nos primeiros 20 metros. Foi a cadeira que te tirou da prova.",
+    "What is a DNF?": "O que é um DNF?",
+    "Did Not Finish. You didn't complete the loop before the hour was up, so the clock took you out.": "Did Not Finish. Não completaste a volta antes de acabar a hora, por isso foi o relógio que te tirou da prova.",
+    "Can I have a support crew?": "Posso ter uma equipa de apoio?",
+    "Solo runners can have a support crew. Duos can have one person. Crews of four run with no outside support.": "Os atletas a solo podem ter uma equipa de apoio. As duplas podem ter uma pessoa. As equipas de quatro correm sem apoio externo.",
     "How do I sign up?": "Como me inscrevo?",
-    "Join the waitlist. Registration opens to the waitlist before anyone else.": "Junta-te à waitlist. As inscrições abrem primeiro para quem está na waitlist.",
+    "Registration opens soon. Follow <span class=\"hq-tag\">@thechairultra</span> and join the waitlist to be the first to know.": "As inscrições abrem em breve. Segue <span class=\"hq-tag\">@thechairultra</span> e junta-te à waitlist para seres o primeiro a saber.",
+    "What happens if more than one runner completes the 24 hours?": "O que acontece se mais do que um atleta completar as 24 horas?",
+    "There's a 25th loop. The first to finish it wins The Chair 24.": "Há uma 25.ª volta. O primeiro a terminá-la ganha o The Chair 24.",
 
     // partners
     "Build the first edition with us.": "Constrói connosco a primeira edição.",

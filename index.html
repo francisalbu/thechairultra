@@ -917,6 +917,14 @@
       #wl .field-row { grid-template-columns: 1fr 1fr; gap: 12px; }
     }
     @keyframes wlIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+    /* autofill sem fundo amarelo */
+    input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active { -webkit-text-fill-color: var(--bone) !important; caret-color: var(--bone); -webkit-box-shadow: 0 0 0 1000px #0a0a0a inset !important; box-shadow: 0 0 0 1000px #0a0a0a inset !important; transition: background-color 9999s ease-out 0s; }
+    .sheet input:-webkit-autofill { -webkit-box-shadow: 0 0 0 1000px rgba(20,20,20,1) inset !important; }
+    /* waitlist por cima de tudo e página bloqueada por baixo */
+    #wl.overlay { z-index: 200; }
+    body.wl-lock { position: fixed; left: 0; right: 0; width: 100%; overflow: hidden; }
+    @media (max-width: 639px) { #wl .wl-sheet { overflow-y: auto; touch-action: pan-y; } }
+    .hq-tag { font-family: "Codec Pro", "Helvetica Neue", Arial, sans-serif !important; font-weight: 400 !important; color: #fffe00; white-space: nowrap; }
   </style>
   <script>document.documentElement.classList.add("js");</script>
 <script>window.POSTHOG_KEY = "phc_u4gX6nLBo4jYoRSVy8Cw829Xd5bKxY3a64ZGH3YacKXt"; window.POSTHOG_HOST = "https://eu.i.posthog.com";</script>
@@ -1056,8 +1064,11 @@
       <details class="rv"><summary>What's the difference between The Chair 24 and The Chair Backyard Ultra?</summary><p>The Chair 24 lasts 24 hours and can be run solo, in duos or in crews of 4. The Chair Backyard Ultra has no time limit and is solo only. It ends when only one athlete remains.</p></details>
       <details class="rv"><summary>Where and when will it happen?</summary><p>Both races take place in Lisbon. The Chair 24 is planned for Spring 2027 and The Chair Backyard Ultra for Fall 2027. Exact dates will be announced to the waitlist first.</p></details>
       <details class="rv"><summary>Do I need to be an ultra runner?</summary><p>No. You only need to be able to run 6.7 km in under an hour. How far you go after that depends on how long you refuse to quit.</p></details>
-      <details class="rv"><summary>What is the DNT?</summary><p>Did Not Try. If you stay at the base or turn around right after the start line, you'll sit in our chair and receive a DNT.</p></details>
-      <details class="rv"><summary>How do I sign up?</summary><p>Join the waitlist. Registration opens to the waitlist before anyone else.</p></details>
+      <details class="rv"><summary>What is a DNL?</summary><p>Did Not Leave. When the bell rings, you either don't start the next loop, or you start it and turn back after the first 20 metres. The chair took you out.</p></details>
+      <details class="rv"><summary>What is a DNF?</summary><p>Did Not Finish. You didn't complete the loop before the hour was up, so the clock took you out.</p></details>
+      <details class="rv"><summary>Can I have a support crew?</summary><p>Solo runners can have a support crew. Duos can have one person. Crews of four run with no outside support.</p></details>
+      <details class="rv"><summary>How do I sign up?</summary><p>Registration opens soon. Follow <span class="hq-tag">@thechairultra</span> and join the waitlist to be the first to know.</p></details>
+      <details class="rv"><summary>What happens if more than one runner completes the 24 hours?</summary><p>There's a 25th loop. The first to finish it wins The Chair 24.</p></details>
     </div>
   </section>
 
@@ -1346,9 +1357,9 @@
       function openWl() {
         var sf = document.getElementById("signup"); sf.reset(); sf.style.display = "";
         document.getElementById("s-done").style.display = "none"; document.getElementById("s-error").style.display = "none";
-        wl.classList.add("open"); document.body.style.overflow = "hidden";
+        window.__wlY = window.scrollY; document.body.style.top = -window.__wlY + "px"; document.body.classList.add("wl-lock"); wl.classList.add("open");
       }
-      function closeWl() { wl.classList.remove("open"); document.body.style.overflow = ""; }
+      function closeWl() { if (!wl.classList.contains("open")) return; wl.classList.remove("open"); document.body.classList.remove("wl-lock"); document.body.style.top = ""; window.scrollTo(0, window.__wlY || 0); }
       document.querySelectorAll("[data-wl]").forEach(function (b) { b.addEventListener("click", openWl); });
       document.getElementById("wl-close").addEventListener("click", closeWl);
       wl.addEventListener("click", function (e) { if (e.target === wl) closeWl(); });
@@ -1398,7 +1409,7 @@
       var sync = function () { var bars = prog.children; bars[1].classList.toggle("on", steps[0].classList.contains("on")); bars[2].classList.toggle("on", steps[1].classList.contains("on")); };
       new MutationObserver(function () {
         sync();
-        steps.forEach(function (s) { if (s.classList.contains("on") && !s.dataset.seen) { s.dataset.seen = 1; setTimeout(function () { s.scrollIntoView({ behavior: "smooth", block: "nearest" }); }, 380); } });
+        steps.forEach(function (s) { if (s.classList.contains("on") && !s.dataset.seen) { s.dataset.seen = 1; setTimeout(function () { var r = s.getBoundingClientRect(), sr = sheet.getBoundingClientRect(); if (r.bottom > sr.bottom) sheet.scrollTo({ top: sheet.scrollTop + (r.bottom - sr.bottom) + 24, behavior: "smooth" }); }, 420); } });
       }).observe(f, { subtree: true, attributes: true, attributeFilter: ["class"] });
       // reset ao abrir
       new MutationObserver(function () {
@@ -1410,7 +1421,7 @@
       if (vv) { vv.addEventListener("resize", fit); vv.addEventListener("scroll", fit); fit(); }
       f.addEventListener("focusin", function (e) {
         if (!e.target.matches("input, select")) return;
-        setTimeout(function () { e.target.scrollIntoView({ behavior: "smooth", block: "center" }); }, 300);
+        setTimeout(function () { var r = e.target.getBoundingClientRect(), sr = sheet.getBoundingClientRect(); var d = r.top - (sr.top + sr.height * 0.35); if (Math.abs(d) > 40) sheet.scrollTo({ top: sheet.scrollTop + d, behavior: "smooth" }); }, 320);
       });
       // Enter → campo seguinte
       var order = ["s-first", "s-last", "s-email"];
