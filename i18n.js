@@ -7,7 +7,7 @@
     "About": "Sobre",
     "FAQ": "FAQ",
     "Partners": "Parceiros",
-    "The Concept": "Conceito",
+    "Concept": "Conceito",
     "Join the waitlist": "Junta-te à waitlist",
     "Coming soon": "Brevemente",
     "Know more": "Saber mais",
@@ -113,8 +113,8 @@
     "Check your inbox. We'll be in touch before anyone else.": "Verifica o teu email. Vamos falar contigo antes de toda a gente.",
 
     // 24h
-    "<span class=\"inl-logo\"><img></span> is a 24-hour last-person-standing race, in the heart of the city. You run as many loops as you can, <span class=\"tm\"><i>.</i>solo</span>, in <span class=\"tm\"><i>.</i>duos</span> or in <span class=\"tm\"><i>.</i>crews</span> of 4. It's competition, it's community, and it's your chance to go further than you ever have.":
-      "<span class=\"inl-logo\"><img></span> é uma corrida last-person-standing de 24 horas, no coração da cidade. Fazes tantas voltas quanto conseguires, a <span class=\"tm\"><i>.</i>solo</span>, em <span class=\"tm\"><i>.</i>duos</span> ou em <span class=\"tm\"><i>.</i>crews</span> de 4. É competição, é comunidade, e é a tua oportunidade de ir mais longe do que nunca.",
+    "<span class=\"inl-logo\"><img></span> is a 24 hour last person standing race, in the heart of the city. You run as many loops as you can, <span class=\"tm\"><i>.</i>solo</span>, in <span class=\"tm\"><i>.</i>duos</span> or in <span class=\"tm\"><i>.</i>crews</span> of 4. It's competition, it's community, and it's your chance to go further than you ever have.":
+      "<span class=\"inl-logo\"><img></span> é uma corrida last person standing de 24 horas, no coração da cidade. Fazes tantas voltas quanto conseguires, a <span class=\"tm\"><i>.</i>solo</span>, em <span class=\"tm\"><i>.</i>duos</span> ou em <span class=\"tm\"><i>.</i>crews</span> de 4. É competição, é comunidade, e é a tua oportunidade de ir mais longe do que nunca.",
     "Every hour on the hour.": "De hora a hora.",
     "All athletes leave the start box together on the hour, every hour.": "Todos os atletas saem juntos da zona de partida no início de cada hora.",
     "<span class=\"bn\">6.7</span> km per loop.": "<span class=\"bn\">6,7</span> km por volta.",
