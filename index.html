@@ -962,6 +962,12 @@ html.booting,html.booting body{overflow:hidden}
 .rule-win .win2 p b{display:block;font-size:clamp(18px,1.7vw,24px);margin-bottom:8px;color:#f1f0ea}
 @media(max-width:760px){.rule-win .win2{grid-template-columns:1fr}}
 #about .about-photo{max-height:none!important;aspect-ratio:auto!important;height:100%!important}
+
+.faq summary{display:block!important;position:relative;padding-right:44px!important;line-height:1.5}
+.faq summary::after{position:absolute;right:0;top:50%;transform:translateY(-50%)}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq-logo{display:inline-block!important;height:1.5em!important;width:4.4em!important;object-fit:cover;object-position:50% 50%;vertical-align:middle!important;margin:-.3em 0!important}
+#about .about-title{color:#fffe00}
 </style>
   <script>document.documentElement.classList.add("js");</script>
 <script>window.POSTHOG_KEY = "phc_u4gX6nLBo4jYoRSVy8Cw829Xd5bKxY3a64ZGH3YacKXt"; window.POSTHOG_HOST = "https://eu.i.posthog.com";</script>

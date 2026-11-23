@@ -941,6 +941,13 @@
 .rule-win .win2 p{margin:0;padding:20px;border-radius:16px;background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.1)}
 .rule-win .win2 p b{display:block;font-size:clamp(18px,1.7vw,24px);margin-bottom:8px;color:#f1f0ea}
 @media(max-width:760px){.rule-win .win2{grid-template-columns:1fr}}
+
+@media(min-width:900px){.rules-grid{grid-template-columns:repeat(3,1fr)!important}.rule{margin-right:0!important;padding:26px 20px 8px!important}}
+.rule{text-align:center}.rule p{margin-left:auto;margin-right:auto}
+.rule-win{border:0!important;background:none!important;text-align:center;margin-top:clamp(32px,5vw,64px);padding:0!important}
+.rule-win::before{margin-left:auto;margin-right:auto}
+.rule-win .win2{max-width:900px;margin:22px auto 0!important}
+.rule-win .win2 p{text-align:center}
 </style>
   <script>document.documentElement.classList.add("js");</script>
 <script>window.POSTHOG_KEY = "phc_u4gX6nLBo4jYoRSVy8Cw829Xd5bKxY3a64ZGH3YacKXt"; window.POSTHOG_HOST = "https://eu.i.posthog.com";</script>
