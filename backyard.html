@@ -83,6 +83,7 @@
     .hero-btn { display: inline-flex; align-items: center; gap: 12px; background: #fff; color: #000; text-decoration: none; text-transform: uppercase; font-size: 13px; letter-spacing: .14em; padding: 16px 26px; border-radius: 999px; transition: background .2s, transform .15s; }
     .hero-btn:hover { background: var(--volt); }
     .hero-btn:active { transform: scale(.98); }
+    .is-soon, .is-soon:hover { cursor: default !important; pointer-events: none; background: transparent !important; color: var(--bone) !important; border: 1px solid rgba(241,240,234,.35) !important; transform: none !important; }
     .hero-btn i { font-style: normal; }
     .brand { position: absolute; top: calc(22px + env(safe-area-inset-top)); left: 20px; z-index: 2; color: var(--bone); text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: clamp(18px, 2vw, 24px); letter-spacing: -.01em; line-height: 1; }
     @media (min-width: 900px) { .brand { left: 40px; top: calc(28px + env(safe-area-inset-top)); } }
@@ -984,7 +985,7 @@
     <a href="/#about">Concept</a>
     <a href="/#faq">FAQ</a>
     <a href="/#partners">Partners</a>
-    <button type="button" class="m-cta" data-wl>Join the waitlist</button>
+    <button type="button" class="m-cta is-soon" disabled aria-disabled="true">Coming soon</button>
   </nav>
 
   <!-- HERO -->
@@ -995,7 +996,7 @@
       <p class="fp-date">Fall 2027</p>
       <p class="fp-date fp-city">Lisbon</p>
       <div class="mod-tags"><span><i>.</i>solo</span></div>
-      <button class="hero-btn" type="button" data-wl>Join the waitlist</button>
+      <button class="hero-btn is-soon" type="button" disabled aria-disabled="true">Coming soon</button>
     </div>
   </section>
 
@@ -1062,7 +1063,7 @@
         </div>
       </div>
       <p class="pick rv">How far will you go?</p>
-      <button class="wl-cta pick-btn rv" type="button" data-wl>Join the waitlist</button>
+      <button class="wl-cta pick-btn rv is-soon" type="button" disabled aria-disabled="true">Coming soon</button>
     </div>
   </section>
 
@@ -1087,7 +1088,7 @@
         <div class="hq-card rv">
           <span class="hq-n">03</span>
           <h3>Wildcard</h3>
-          <p>Show us why you belong in the chair. Post a video on Instagram with <span class="hq-tag">#thechairultra</span> and tag <span class="hq-tag">@thechairultra</span>.</p>
+          <p>Show us why you belong in the chair. Post a video on Instagram or TikTok with <span class="hq-tag">#thechairultra</span> and tag <span class="hq-tag">@thechairultra</span>.</p>
         </div>
       </div>
     </div>

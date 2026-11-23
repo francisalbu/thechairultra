@@ -164,7 +164,7 @@
     "Lottery": "Lotaria",
     "Enter the lottery and, if you're lucky, you'll see your name drawn live on the livestream.": "Entra na lotaria e, se tiveres sorte, verás o teu nome a ser escolhido em direto na livestream.",
     "Wildcard": "Wildcard",
-    "Show us why you belong in the chair. Post a video on Instagram with <span class=\"hq-tag\">#thechairultra</span> and tag <span class=\"hq-tag\">@thechairultra</span>.": "Mostra-nos porque mereces um lugar na cadeira. Publica um vídeo no Instagram com <span class=\"hq-tag\">#thechairultra</span> e identifica <span class=\"hq-tag\">@thechairultra</span>.",
+    "Show us why you belong in the chair. Post a video on Instagram or TikTok with <span class=\"hq-tag\">#thechairultra</span> and tag <span class=\"hq-tag\">@thechairultra</span>.": "Mostra-nos porque mereces um lugar na cadeira. Publica um vídeo no Instagram ou no TikTok com <span class=\"hq-tag\">#thechairultra</span> e identifica <span class=\"hq-tag\">@thechairultra</span>.",
     "Top 3 <span class=\"tm\"><i>.</i>solo</span>": "Top 3 <span class=\"tm\"><i>.</i>solo</span>",
     "Top 3 Men": "Top 3 Homens",
     "Top 3 Women": "Top 3 Mulheres",
