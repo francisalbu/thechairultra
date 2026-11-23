@@ -25,7 +25,7 @@
     "A 24 hour last person standing race.<br>Run it solo, in duos or in crews of 4.<br>Strategy is key.":
       "Uma corrida last person standing de 24 horas.<br>Corre a solo, em duplas ou em equipas de 4.<br>A estratégia é tudo.",
     "A traditional backyard ultra race.<br>6.7km loops, every hour on the hour.<br>No time limit. Last person standing wins.":
-      "Uma backyard ultra tradicional.<br>Voltas de 6,7 km, de hora a hora.<br>Sem limite de tempo. Ganha o último em pé.",
+      "Uma backyard ultra tradicional.<br>Voltas de 6,7 km, de hora a hora.<br>Sem limite de tempo. Ganha o último atleta em pé.",
 
     // about
     "<b>The Chair Ultra is a project designed to redefine endurance racing by challenging athletes to push beyond what they believe they are capable of.</b>":
@@ -33,7 +33,7 @@
     "We believe distance is more than the kilometres you can run. It is the gap between what you think you can achieve and what you can actually do when you refuse to quit.":
       "Acreditamos que a distância é mais do que os quilómetros que consegues correr. É o espaço entre aquilo que achas que consegues e aquilo que realmente fazes quando te recusas a desistir.",
     "<b>That is the distance you will redefine.</b>": "<b>É essa a distância que vais redefinir.</b>",
-    "The concept": "O conceito",
+    "Concept": "Conceito",
     "You are a <span class=\"dnl\"><i>.</i>DNL</span>": "És um <span class=\"dnl\"><i>.</i>DNL</span>",
     "Official Race Codes": "Conclusões oficiais da prova",
     "What sets us apart": "O que nos distingue",
@@ -116,21 +116,21 @@
       "<span class=\"inl-logo\"><img></span> é uma corrida last-person-standing de 24 horas, no coração da cidade. Fazes tantas voltas quanto conseguires, a <span class=\"tm\"><i>.</i>solo</span>, em <span class=\"tm\"><i>.</i>duos</span> ou em <span class=\"tm\"><i>.</i>crews</span> de 4. É competição, é comunidade, e é a tua oportunidade de ir mais longe do que nunca.",
     "Every hour on the hour.": "De hora a hora.",
     "All athletes leave the start box together on the hour, every hour.": "Todos os atletas saem juntos da zona de partida no início de cada hora.",
-    "6.7 km per loop.": "6,7 km por volta.",
+    "<span class=\"bn\">6.7</span> km per loop.": "<span class=\"bn\">6,7</span> km por volta.",
     "Athletes have one hour to run the loop at their own pace. They must be back in the start box before the next hour starts.":
       "Os atletas têm uma hora para fazer a volta ao seu ritmo. Têm de estar de volta à zona de partida antes de começar a hora seguinte.",
-    "Late means disqualification.": "Atrasado é desclassificado.",
-    "Athletes who aren't in the start box when the next hour begins are disqualified.": "Os atletas que não estiverem na zona de partida quando começa a hora seguinte são desclassificados.",
+    "Arrive before the bell.": "Chega antes do sino.",
+    "Athletes who aren't in the start box when the next hour begins drop out of the race.": "Os atletas que não estiverem na zona de partida quando começa a hora seguinte abandonam a prova.",
     "Two ways to win.": "Duas formas de ganhar.",
-    "<b>Last Person Standing wins.</b> The race continues hour after hour until only one athlete/team remains.": "<b>Ganha o último em pé.</b> A corrida continua hora após hora até restar apenas um atleta/equipa.",
-    "<b><span class=\"hl\"><i>.</i>25<small>th</small></span> lap - Winner takes it all.</b> If more than one runner makes it through 24 hours, there's one final loop. First to finish it wins.":
-      "<b><span class=\"hl\"><i>.</i>25<small>.ª</small></span> volta - O vencedor leva tudo.</b> Se mais do que um atleta chegar às 24 horas, há uma última volta. O primeiro a terminá-la ganha.",
+    "<b>Last person/team wins.</b> The race continues hour after hour until only one athlete/team remains.": "<b>Last person/team ganha.</b> A corrida continua hora após hora até restar apenas um atleta/equipa.",
+    "<b><span class=\"hl\"><i>.</i>25<small>th</small></span> lap - All or nothing.</b> If more than one athlete/team remains after 24 hours, a 25th loop is run. The first to finish in each category wins.":
+      "<b><span class=\"hl\"><i>.</i>25<small>th</small></span> lap - Tudo ou nada.</b> Se mais do que um atleta/equipa restar após as 24 horas, é realizado um 25.º loop. O primeiro a chegar de cada modalidade vence.",
     "The last athlete standing wins.": "Ganha o último atleta em pé.",
     "The race ends when only one athlete remains.": "A corrida acaba quando resta apenas um atleta.",
     "Your race.<br>Your strategy.": "A tua corrida.<br>A tua estratégia.",
-    "It's just you against your personal best.": "És só tu contra o teu melhor.",
+    "It's just you against your personal best.": "És só tu contra ti.",
     "Last person standing wins. If it goes past 24 hours, all remaining <span class=\"tm\"><i>.</i>solo</span> runners dispute a 25th loop to decide the <span class=\"tm\"><i>.</i>solo</span> winner.":
-      "Ganha o último em pé. Se passar das 24 horas, todos os atletas <span class=\"tm\"><i>.</i>solo</span> que restarem disputam uma 25.ª volta para decidir o vencedor <span class=\"tm\"><i>.</i>solo</span>.",
+      "Ganha o último atleta em pé. Se passar das 24 horas, todos os atletas <span class=\"tm\"><i>.</i>solo</span> que restarem disputam uma 25.ª volta para decidir o vencedor <span class=\"tm\"><i>.</i>solo</span>.",
     "Runners can bring their supporting crew.": "Os atletas podem trazer a sua equipa de apoio.",
     "Pick your teammate and go beyond together.": "Escolhe o teu parceiro e vão mais longe juntos.",
     "Define a strategy and take turns between loops.": "Definam uma estratégia e revezem-se entre voltas.",
