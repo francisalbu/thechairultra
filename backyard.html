@@ -828,7 +828,6 @@
     .wl-step.on > .wl-step-in { overflow: visible; }
     /* ===== MOBILE (Instagram in-app) ===== */
     html, body { overflow-x: clip; }
-    img, video { max-width: 100%; }
     a, button, label, summary { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
     @media (max-width: 760px) {
       .sec { padding-left: 20px !important; padding-right: 20px !important; }
@@ -858,6 +857,27 @@
       footer.cap { flex-direction: column; align-items: center; gap: 14px !important; text-align: center; }
     }
     @media (prefers-reduced-motion: reduce) { .portal-bg, .about-photo img, .split-photo img { animation: none !important; } }
+    /* ===== menu mobile (hamburger) ===== */
+    .nav-burger { display: none; position: relative; width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; flex: none; }
+    .nav-burger span { position: absolute; left: 11px; right: 11px; height: 2px; border-radius: 2px; background: var(--bone); transition: transform .35s var(--ease), opacity .2s; }
+    .nav-burger span:nth-child(1) { top: 15px; } .nav-burger span:nth-child(2) { top: 21px; } .nav-burger span:nth-child(3) { top: 27px; }
+    .nav-open .nav-burger span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-open .nav-burger span:nth-child(2) { opacity: 0; }
+    .nav-open .nav-burger span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    .m-menu { position: fixed; inset: 0; z-index: 90; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 110px 28px calc(40px + env(safe-area-inset-bottom)); background: rgba(0,0,0,.92); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); opacity: 0; visibility: hidden; transition: opacity .35s var(--ease), visibility .35s; overflow-y: auto; }
+    .nav-open .m-menu { opacity: 1; visibility: visible; }
+    .m-menu a { color: var(--bone); text-decoration: none; font-weight: 800; text-transform: uppercase; letter-spacing: -.03em; font-size: clamp(34px, 10vw, 52px); line-height: 1.1; padding: 6px 0; opacity: 0; transform: translateY(14px); transition: opacity .45s var(--ease), transform .45s var(--ease), color .2s; }
+    .m-menu a:active { color: #fffe00; }
+    .nav-open .m-menu a { opacity: 1; transform: none; }
+    .nav-open .m-menu a:nth-child(2) { transition-delay: .05s; } .nav-open .m-menu a:nth-child(3) { transition-delay: .1s; } .nav-open .m-menu a:nth-child(4) { transition-delay: .15s; } .nav-open .m-menu a:nth-child(5) { transition-delay: .2s; } .nav-open .m-menu a:nth-child(6) { transition-delay: .25s; }
+    .m-menu .m-fmt { display: flex; flex-direction: column; gap: 4px; padding: 4px 0 14px 2px; }
+    .m-menu .m-fmt a { font-size: 0; padding: 8px 0; }
+    .m-menu .m-fmt .nav-dd-logo { width: min(240px, 62vw); }
+    .m-menu .m-cta { margin-top: 24px; align-self: flex-start; font-size: 14px; letter-spacing: .14em; background: #fff; color: #000; padding: 16px 26px; border-radius: 999px; }
+    .nav { z-index: 100; }
+    @media (max-width: 759px) { .nav-burger { display: block; } .nav .nav-cta { display: none; } }
+    @media (min-width: 760px) { .m-menu { display: none; } }
+    body.nav-open { overflow: hidden; }
   </style>
   <script>document.documentElement.classList.add("js");</script>
 <script>window.POSTHOG_KEY = "phc_u4gX6nLBo4jYoRSVy8Cw829Xd5bKxY3a64ZGH3YacKXt"; window.POSTHOG_HOST = "https://eu.i.posthog.com";</script>
@@ -875,7 +895,16 @@
       <a href="/#partners">Partners</a>
     </nav>
     <a class="nav-cta" href="/#formats">Join the waitlist</a>
+    <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="m-menu"><span></span><span></span><span></span></button>
   </header>
+  <nav class="m-menu" id="m-menu" aria-label="Mobile" aria-hidden="true">
+    <a href="/#formats">Formats</a>
+    <div class="m-fmt"><a href="24h.html" aria-label="The Chair 24"><span class="nav-dd-logo"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(11).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDExKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MzA3LCJleHAiOjE4MjY4NDAzMDd9.jzAYFBHKuRpI343Yr5RCim_5peoXXIF1b8gCTad617wye_vLyNse0Dvn7G0POVtv9rC_HWu9-Tohfc8OtJfcVQ" alt="" /></span></a><a href="backyard.html" aria-label="The Chair Backyard Ultra"><span class="nav-dd-logo"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(10).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDEwKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MDUzLCJleHAiOjE4MjY4NDAwNTN9.phr0sY3dnq_rGTzSAnEKVglVuMDooITzqMrJOZkI3fc2sStpr38SxLlgd9FPIc1swgxGD-K08oCHwca1KLpFjA" alt="" /></span></a></div>
+    <a href="/#about">The Concept</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/#partners">Partners</a>
+    <button type="button" class="m-cta" data-wl>Join the waitlist</button>
+  </nav>
 
   <!-- HERO -->
   <section class="hero fp-hero" id="top">
@@ -1282,6 +1311,16 @@
       var chk = function () { if (fn.value.trim() && ln.value.trim() && em.value.trim() && em.checkValidity()) show(s3); };
       [fn, ln, em].forEach(function (i) { i.addEventListener("input", chk); i.addEventListener("blur", chk); });
       if (f.querySelector('input[name="modality"]:checked')) show(s2);
+    })();
+  </script>
+  <script>
+    (function () {
+      var b = document.querySelector(".nav-burger"), m = document.getElementById("m-menu"); if (!b || !m) return;
+      var set = function (o) { document.body.classList.toggle("nav-open", o); b.setAttribute("aria-expanded", o); m.setAttribute("aria-hidden", !o); };
+      b.addEventListener("click", function () { set(!document.body.classList.contains("nav-open")); });
+      m.addEventListener("click", function (e) { if (e.target.closest("a, button")) set(false); });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+      window.addEventListener("resize", function () { if (innerWidth >= 760) set(false); });
     })();
   </script>
 </body>
