@@ -8,8 +8,8 @@
   <meta property="og:title" content="The Chair — The new era of backyard ultras" />
   <meta property="og:description" content="Will you try? Or are you going to quit in the chair? Be the first to know." />
   <meta property="og:image" content="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/corrida.png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9jb3JyaWRhLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTIyNjc2NjksImV4cCI6MTgyMzgwMzY2OX0.8kDDYNgYwCTYAQsTacMcq0_h_4_BpbzocGeGOxXzVorTrF5N8uqaDMl8s_wCmffYQWrZifHb2bnpfxfbSHcSZg" />
-  <meta property="og:url" content="https://thechairultra.com/backyard" />
-  <link rel="canonical" href="https://thechairultra.com/backyard" />
+  <meta property="og:url" content="https://thechairultra.com/24h" />
+  <link rel="canonical" href="https://thechairultra.com/24h" />
   <meta name="theme-color" content="#0b0d0b" />
   <link rel="preconnect" href="https://exxqaluncgpzbopeikdh.supabase.co" crossorigin />
   <link rel="preconnect" href="https://esm.sh" crossorigin />
@@ -723,7 +723,20 @@
     .fp-logo { width: clamp(300px, 60vw, 820px); aspect-ratio: 1380 / 300; overflow: hidden; position: relative; }
     .fp-logo img { position: absolute; left: -24.5%; top: 50%; width: 145%; height: auto; transform: translateY(-50%); }
     .fp-date { font-size: clamp(22px, 3vw, 40px); font-weight: 800; text-transform: uppercase; letter-spacing: -.01em; color: #fff; }
-    .fp-hero .mod-tags { justify-content: center; }
+    .fp-hero .mod-tags { justify-content: center; gap: clamp(16px, 2.4vw, 32px); }
+    .fp-hero .mod-tags span { font-size: clamp(22px, 2.8vw, 38px); }
+    .mods-title { font-style: italic; font-weight: 800; font-size: clamp(28px, 4vw, 52px); letter-spacing: -.02em; text-align: center; margin-bottom: clamp(28px, 4vw, 48px); }
+    .mods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: clamp(40px, 6vw, 72px); }
+    .mod { background: rgba(241,240,234,.05); border: 1px solid rgba(241,240,234,.12); border-radius: 18px; padding: 26px 22px; }
+    .mod-h { display: flex; align-items: center; gap: 14px; }
+    .mod-h b { font-style: italic; font-weight: 400; color: #FFFC00; font-size: clamp(30px, 3vw, 42px); letter-spacing: -.03em; }
+    .mod-h svg { height: 40px; width: auto; }
+    .mod-sub { font-style: italic; font-weight: 700; margin: 12px 0 16px; font-size: 16px; }
+    .mod ul { list-style: none; display: grid; gap: 12px; }
+    .mod li { position: relative; padding-left: 16px; font-size: 15px; line-height: 1.5; color: rgba(241,240,234,.85); }
+    .mod li::before { content: ""; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; border-radius: 50%; background: #FFFC00; }
+    .mod li em { color: #FFFC00; }
+    @media (max-width: 860px) { .mods { grid-template-columns: 1fr; } }
     .fp-info .sec-in { max-width: 1000px; }
     .fp-info .fp-text { font-size: clamp(18px, 2vw, 26px); line-height: 1.45; margin-bottom: clamp(28px, 4vw, 44px); }
     .fp-info .meta { margin-bottom: clamp(32px, 4vw, 48px); }
@@ -734,13 +747,43 @@
     .fp-cta h2 { font-weight: 800; text-transform: uppercase; font-size: clamp(30px, 4.6vw, 58px); letter-spacing: -.03em; line-height: .95; }
     .fp-cta .soon { font-size: 15px; }
     a.more { display: inline-block; text-decoration: none; }
-    .see-other { display: block; width: fit-content; margin: 0 auto; color: var(--bone); border: 1px solid rgba(241,240,234,.35); border-radius: 999px; padding: 10px 18px; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .fp-info-logo { position: relative; overflow: hidden; width: clamp(260px, 44vw, 560px); aspect-ratio: 1380 / 300; margin: 0 auto clamp(24px, 3vw, 40px); max-width: 100%; }
+    .fp-info-logo img { position: absolute; left: -24.5%; top: 50%; width: 145%; height: auto; transform: translateY(-50%); }
+    .fp-info { text-align: center; }
+    .fp-info .fp-text { margin: 0 auto; max-width: 46ch; }
+    .rule p b { color: var(--bone); }
+    .rule p .hl { color: #FFFC00; }
+    .rule p + p { margin-top: 10px; }
+    .fp-strat { padding-top: clamp(140px, 18vw, 240px); text-align: center; }
+    .fp-strat .mod { text-align: left; }
+    .pick { font-style: italic; font-weight: 800; font-size: clamp(24px, 3.2vw, 42px); letter-spacing: -.02em; color: #FFFC00; margin-top: 0; }
+    .pick-btn { width: auto; display: inline-flex; margin: 24px auto 0; font-size: 15px; padding: 14px 26px; }
+    .inl-logo { display: inline-block; position: relative; overflow: hidden; height: 1.5em; aspect-ratio: 1380 / 300; vertical-align: -.42em; }
+    .inl-logo img { position: absolute; left: -24.5%; top: 50%; width: 145%; height: auto; transform: translateY(-50%); }
+    .fp-info { padding-bottom: 0 !important; }
+    .fp-info + .concept { padding-top: clamp(16px, 2vw, 28px) !important; padding-bottom: clamp(40px, 5vw, 64px); }
+    .fp-info + .concept .cright { max-width: 340px; margin-top: 0; }
+    .fp-strat { padding-top: clamp(32px, 4vw, 56px) !important; }
+    .fp-strat .mods-title { line-height: 1; }
+    .tm { font-family: "Codec Pro", "Helvetica Neue", Arial, sans-serif; font-style: italic; font-weight: 400 !important; color: #FFFC00 !important; }
+    .tm i { font-style: italic; color: #fff; }
+    .fp-strat { position: relative; isolation: isolate; overflow: hidden; margin-top: clamp(64px, 8vw, 120px); padding-top: clamp(80px, 10vw, 140px) !important; }
+    .strat-bg { position: absolute; inset: 0; z-index: -1; }
+    .strat-bg img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(1) contrast(1.05); }
+    .strat-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, #000 0%, rgba(0,0,0,.55) 18%, rgba(0,0,0,.55) 82%, #000 100%); }
+    .fp-strat .mods-title { text-align: center; max-width: none; margin-left: auto; margin-right: auto; }
+    .fp-strat .mod { background: rgba(0,0,0,.35); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+    .fp-bg { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
+    .fp-bg .portal-bg { filter: grayscale(1); }
+    .fp-bg .portal-bg.ghost { filter: grayscale(1) blur(9px); }
+    .see-other { display: block; width: fit-content; margin: 22px auto 0; color: var(--bone); border: 1px solid rgba(241,240,234,.35); border-radius: 999px; padding: 10px 18px; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
     .see-other:hover { border-color: var(--bone); }
     /* menu liquid glass */
     .nav { background: linear-gradient(135deg, rgba(255,255,255,.14), rgba(255,255,255,.04)) !important; -webkit-backdrop-filter: blur(22px) saturate(180%); backdrop-filter: blur(22px) saturate(180%); border: 1px solid rgba(255,255,255,.22); box-shadow: inset 0 1px 0 rgba(255,255,255,.35), inset 0 -1px 0 rgba(255,255,255,.06), 0 10px 40px -12px rgba(0,0,0,.5); }
     .nav-cta:hover { background: #fffe00; color: #000; }
     footer, footer *, footer.cap, footer .cap { font-family: "Codec Pro", "Helvetica Neue", Arial, sans-serif !important; font-weight: 400 !important; font-style: normal !important; }
     button.hero-btn { border: 0; font-family: inherit; cursor: pointer; }
+    .mods-one { grid-template-columns: minmax(0, 520px) !important; justify-content: center; }
   </style>
   <script>document.documentElement.classList.add("js");</script>
 <script src="/i18n.js" defer></script>
@@ -760,28 +803,25 @@
 
   <!-- HERO -->
   <section class="hero fp-hero" id="top">
-    <video class="bg" autoplay muted loop playsinline preload="auto" aria-hidden="true" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/b5a88998-54e4-4a61-8c48-d2e7a24bb61e%20(1).mp4?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9iNWE4ODk5OC01NGU0LTRhNjEtOGM0OC1kMmU3YTI0YmI2MWUgKDEpLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM3MjU5MTgsImV4cCI6MTgyNTI2MTkxOH0.lcdfWMYsZakdVaF19LOzSxj4RRGcmpbPu447197veNIEH-dovXs9ju-GEPh6RWtbkO5LCOSIjIiNr1DMH4zFZg"></video>
+    <div class="fp-bg" aria-hidden="true"><img class="portal-bg" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/06.webp?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy8wNi53ZWJwIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzgwNjQxOSwiZXhwIjoxODI1MzQyNDE5fQ.23ldWwsq65C5lJC6V4tIYUv4CiA6CF0epsvFdFsPiXdITStqNpkBD659CbZt_UWiojA30V-ry7uxE8p5w7DtPA" alt="" decoding="async" /><img class="portal-bg ghost" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/06.webp?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy8wNi53ZWJwIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzgwNjQxOSwiZXhwIjoxODI1MzQyNDE5fQ.23ldWwsq65C5lJC6V4tIYUv4CiA6CF0epsvFdFsPiXdITStqNpkBD659CbZt_UWiojA30V-ry7uxE8p5w7DtPA" alt="" decoding="async" /><div class="portal-shade"></div></div>
     <div class="hero-center">
       <h1 class="fp-logo"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(10).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDEwKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MDUzLCJleHAiOjE4MjY4NDAwNTN9.phr0sY3dnq_rGTzSAnEKVglVuMDooITzqMrJOZkI3fc2sStpr38SxLlgd9FPIc1swgxGD-K08oCHwca1KLpFjA" alt="The Chair Backyard Ultra" width="2000" height="2000" /></h1>
       <p class="fp-date">Fall 2027</p>
       <div class="mod-tags"><span><i>.</i>solo</span></div>
-      <span class="soon">Coming soon</span>
+      <button class="hero-btn" type="button" data-wl>Join the waitlist</button>
     </div>
   </section>
 
   <!-- INFO -->
   <section class="sec fp-info" id="info">
     <div class="sec-in">
-      <p class="kicker rv">The race</p>
-      <p class="fp-text rv">A traditional backyard ultra. All athletes start together on the hour. You have one hour to finish the 6.7 km loop and be back in the start box before the next hour begins. Miss it and you're out. There is no time limit: the race ends when only one athlete remains.</p>
-      <div class="meta rv"><span>Lisbon</span><span>6.7 km every hour, on the hour</span><span>No time limit</span><span>Fall 2027</span></div>
+      <p class="fp-text rv"><span class="inl-logo"><img class="inline-logo" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(10).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDEwKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MDUzLCJleHAiOjE4MjY4NDAwNTN9.phr0sY3dnq_rGTzSAnEKVglVuMDooITzqMrJOZkI3fc2sStpr38SxLlgd9FPIc1swgxGD-K08oCHwca1KLpFjA" alt="The Chair Backyard Ultra" width="2000" height="2000" /></span> is a traditional backyard ultra. All athletes start together on the hour. You have one hour to finish the 6.7 km loop and be back in the start box before the next hour begins. Miss it and you\'re out. There is no time limit: the race ends when only one athlete remains.</p>
     </div>
   </section>
 
   <!-- CONCEPT -->
   <section class="sec concept" id="concept">
     <div class="sec-in">
-      <h2 class="rv rules-title">Backyard ultra format</h2>
       <div class="cright rv" aria-hidden="true">
         <svg id="loop" viewBox="0 0 600 500" fill="none">
           <defs>
@@ -819,9 +859,23 @@
     </div>
   </section>
 
-  <!-- OTHER -->
-  <section class="sec fp-cta" id="other">
+  <!-- STRATEGY -->
+  <section class="sec fp-strat" id="strategy">
+    <div class="strat-bg" aria-hidden="true"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/magnific_it-169-and-even-more-blurred_YMg0F8yWeC.png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9tYWduaWZpY19pdC0xNjktYW5kLWV2ZW4tbW9yZS1ibHVycmVkX1lNZzBGOHlXZUMucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTMxMzUxNSwiZXhwIjoxODI2ODQ5NTE1fQ.4Zu7Y-S3--DZi6ESVyK-oKHha7xvrHzy5ZuP6v2UuXJPkGuShrwsm12OsYVQjT5t_JCNp1hDG1roDQY5qDUqKQ" alt="" loading="lazy" decoding="async" /></div>
     <div class="sec-in">
+      <h2 class="mods-title rv">One loop.<br />No limit.</h2>
+      <div class="mods mods-one">
+        <div class="mod rv">
+          <div class="mod-h"><b class="tm"><i>.</i>solo</b><svg viewBox="0 0 24 28" fill="none" stroke="#f1f0ea" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="7" r="5"/><path d="M3 27v-6a9 9 0 0 1 18 0v6"/></svg></div>
+          <p class="mod-sub">It's just you against everyone else, and yourself.</p>
+          <ul>
+            <li>No time limit. The race goes on until only one runner remains.</li>
+            <li>Runners can bring their supporting crew.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="pick rv">How far will you go?</p>
+      <button class="wl-cta pick-btn rv" type="button" data-wl>Join the waitlist</button>
       <a class="more see-other rv" href="24h.html">See The Chair.24 format</a>
     </div>
   </section>
@@ -832,7 +886,7 @@
       <div class="sheet-head">
         <div>
           <div class="cap"><span class="tag">Waitlist</span></div>
-          <h3 id="wl-title" class="m-logo"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(11).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDExKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MzA3LCJleHAiOjE4MjY4NDAzMDd9.jzAYFBHKuRpI343Yr5RCim_5peoXXIF1b8gCTad617wye_vLyNse0Dvn7G0POVtv9rC_HWu9-Tohfc8OtJfcVQ" alt="The Chair 24 — Join the waitlist" /></h3>
+          <h3 id="wl-title" class="m-logo"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(10).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDEwKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MDUzLCJleHAiOjE4MjY4NDAwNTN9.phr0sY3dnq_rGTzSAnEKVglVuMDooITzqMrJOZkI3fc2sStpr38SxLlgd9FPIc1swgxGD-K08oCHwca1KLpFjA" alt="The Chair 24 — Join the waitlist" /></h3>
         </div>
         <button class="x" id="wl-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
       </div>

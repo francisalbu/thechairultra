@@ -140,7 +140,12 @@
       "Uma backyard ultra tradicional. Todos os atletas partem juntos no início de cada hora. Tens uma hora para fazer a volta de 6,7 km e voltar à zona de partida antes de começar a hora seguinte. Se falhares, estás fora. Não há limite de tempo: a corrida acaba quando resta apenas um atleta.",
     "6.7 km every hour, on the hour": "6,7 km de hora a hora",
     "No time limit": "Sem limite de tempo",
-    "The race": "A corrida"
+    "The race": "A corrida",
+    "<span class=\"inl-logo\"><img></span> is a traditional backyard ultra. All athletes start together on the hour. You have one hour to finish the 6.7 km loop and be back in the start box before the next hour begins. Miss it and you're out. There is no time limit: the race ends when only one athlete remains.": "<span class=\"inl-logo\"><img></span> é uma backyard ultra tradicional. Todos os atletas partem juntos no início de cada hora. Tens uma hora para fazer a volta de 6,7 km e voltar à zona de partida antes de começar a hora seguinte. Se falhares, estás fora. Não há limite de tempo: a corrida acaba quando resta apenas um atleta.",
+    "One loop.<br>No limit.": "Uma volta.<br>Sem limite.",
+    "It's just you against everyone else, and yourself.": "És só tu contra todos os outros, e contra ti próprio.",
+    "No time limit. The race goes on until only one runner remains.": "Sem limite de tempo. A corrida continua até restar apenas um atleta.",
+    "How far will you go?": "Até onde vais?"
   };
   var PH = { "First name": "Nome", "Last name": "Apelido", "Your email": "O teu email", "Country": "País", "District": "Distrito" };
 
