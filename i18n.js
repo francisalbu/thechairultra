@@ -123,8 +123,8 @@
     "Athletes who aren't in the start box when the next hour begins are disqualified.": "Os atletas que não estiverem na zona de partida quando começa a hora seguinte são desclassificados.",
     "Two ways to win.": "Duas formas de ganhar.",
     "<b>Last Person Standing wins.</b> The race continues hour after hour until only one athlete/team remains.": "<b>Ganha o último em pé.</b> A corrida continua hora após hora até restar apenas um atleta/equipa.",
-    "<b><span class=\"hl\">.25th</span> lap - Winner takes it all.</b> If more than one runner makes it through 24 hours, there's one final loop. First to finish it wins.":
-      "<b><span class=\"hl\">.25.ª</span> volta - O vencedor leva tudo.</b> Se mais do que um atleta chegar às 24 horas, há uma última volta. O primeiro a terminá-la ganha.",
+    "<b><span class=\"hl\"><i>.</i>25<small>th</small></span> lap - Winner takes it all.</b> If more than one runner makes it through 24 hours, there's one final loop. First to finish it wins.":
+      "<b><span class=\"hl\"><i>.</i>25<small>.ª</small></span> volta - O vencedor leva tudo.</b> Se mais do que um atleta chegar às 24 horas, há uma última volta. O primeiro a terminá-la ganha.",
     "The last athlete standing wins.": "Ganha o último atleta em pé.",
     "The race ends when only one athlete remains.": "A corrida acaba quando resta apenas um atleta.",
     "Your race.<br>Your strategy.": "A tua corrida.<br>A tua estratégia.",
