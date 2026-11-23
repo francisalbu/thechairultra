@@ -33,6 +33,8 @@
       "Acreditamos que a distância é mais do que os quilómetros que consegues correr. É o espaço entre aquilo que achas que consegues e aquilo que realmente fazes quando te recusas a desistir.",
     "<b>That is the distance you will redefine.</b>": "<b>É essa a distância que vais redefinir.</b>",
     "The concept": "O conceito",
+    "You got a <span>DNL.</span>": "Levaste um <span>DNL.</span>",
+    "Official Race Codes": "Códigos oficiais da prova",
     "What sets us apart": "O que nos distingue",
     "Up until now, last person standing races only had 2 possible conclusions. <b>Last Person Standing</b> and <b>DNF</b> (did not finish).": "Até agora, as corridas last person standing tinham apenas 2 desfechos possíveis. <b>Last Person Standing</b> e <b>DNF</b> (did not finish).",
     "The Chair Ultra races provide a mental stimulus for runners to keep on going.": "As corridas The Chair Ultra dão aos atletas um estímulo mental para continuarem.",

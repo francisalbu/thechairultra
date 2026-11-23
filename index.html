@@ -796,6 +796,21 @@
     .ap-chair::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(0,0,0,0) 40%, rgba(0,0,0,.6) 100%); }
     .by .who img, .by .who .av { width: 84px !important; height: 84px !important; }
     .by .who .av img { width: 100% !important; height: 100% !important; transform: none; }
+    button.hero-btn { border: 0; font-family: inherit; cursor: pointer; }
+    .ap-split { padding-top: clamp(24px, 3vw, 48px) !important; }
+    .ap-video + .ap-split .ap-grid { align-items: start; }
+    .ap-verdict { margin-top: 28px; font-weight: 800; text-transform: uppercase; letter-spacing: -.035em; line-height: .95; font-size: clamp(44px, 6.4vw, 104px); }
+    .ap-verdict span { color: #fffe00; }
+    .ap-codes-t { margin-top: clamp(64px, 8vw, 120px); text-align: center; font-weight: 800; text-transform: uppercase; letter-spacing: -.03em; font-size: clamp(30px, 4.6vw, 58px); }
+    .ap-res { grid-template-columns: 1fr; background: transparent !important; gap: 16px !important; border-radius: 0 !important; overflow: visible !important; }
+    @media (min-width: 760px) { .ap-res { grid-template-columns: repeat(3, 1fr); } }
+    .ap-res div { position: relative; grid-template-columns: 1fr !important; align-content: start; gap: 14px !important; padding: clamp(28px, 3vw, 44px) !important; border: 1px solid rgba(241,240,234,.14); border-radius: 20px; background: rgba(241,240,234,.04) !important; text-align: center; }
+    .ap-res div::before { position: absolute; top: 16px; right: 20px; font-size: 11px; letter-spacing: .2em; color: var(--mute); }
+    .ap-res div:nth-child(1)::before { content: "1/3"; }
+    .ap-res div:nth-child(2)::before { content: "2/3"; }
+    .ap-res div:nth-child(3)::before { content: "3/3"; }
+    .ap-res dt { font-size: clamp(48px, 5.4vw, 88px) !important; line-height: 1; }
+    .ap-res dd { font-size: clamp(15px, 1.3vw, 18px); line-height: 1.45; }
   </style>
   <script>document.documentElement.classList.add("js");</script>
 <script src="/i18n.js" defer></script>
@@ -887,10 +902,12 @@
         <li>You stayed in the comfort of the chair and didn't go to the corral.</li>
         <li>You walked up to the corral, crossed the start line, did some meters and turned around.</li>
       </ul>
+      <p class="ap-verdict rv">You got a <span>DNL.</span></p>
       <p class="lede rv ap-bell">Runners who did not leave ring the quitting bell, seated in the chair at the start of the corral.</p>
       </div>
       <figure class="ap-chair rv" aria-hidden="true"><img class="portal-bg" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/magnific_use-this-but-zoom-in-and-close-up_EbAnIFGuuO%20(1).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9tYWduaWZpY191c2UtdGhpcy1idXQtem9vbS1pbi1hbmQtY2xvc2UtdXBfRWJBbklGR3V1TyAoMSkucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTQyOTcwOCwiZXhwIjoxODI2OTY1NzA4fQ.THb_L2Ld-AvCn_13o4G09LeLA3k4nc0BVK4fPK0qUxJfgBcB-XAlHjU-NVaGhzpvXaf0hbf96dTFIR1eHPKYOg" alt="" loading="lazy" decoding="async" /><img class="portal-bg ghost" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/magnific_use-this-but-zoom-in-and-close-up_EbAnIFGuuO%20(1).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9tYWduaWZpY191c2UtdGhpcy1idXQtem9vbS1pbi1hbmQtY2xvc2UtdXBfRWJBbklGR3V1TyAoMSkucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTQyOTcwOCwiZXhwIjoxODI2OTY1NzA4fQ.THb_L2Ld-AvCn_13o4G09LeLA3k4nc0BVK4fPK0qUxJfgBcB-XAlHjU-NVaGhzpvXaf0hbf96dTFIR1eHPKYOg" alt="" loading="lazy" decoding="async" /></figure>
       </div>
+      <h3 class="ap-codes-t rv">Official Race Codes</h3>
       <dl class="ap-res rv">
         <div><dt>W</dt><dd>Last Person/Team standing</dd></div>
         <div><dt>DNF</dt><dd>Did not finish the loop in 1 hour but still completed the loop</dd></div>
