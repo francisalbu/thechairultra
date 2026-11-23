@@ -28,7 +28,7 @@
       "Uma backyard ultra tradicional.<br>Voltas de 6,7 km, de hora a hora.<br>Sem limite de tempo. Ganha o último atleta em pé.",
 
     // about
-    "<b>The Chair Ultra is a project designed to redefine endurance racing by challenging athletes to push beyond what they believe they are capable of.</b>":
+    "<b>The Chair Ultra is a project designed to redefine endurance races by challenging athletes to push beyond what they believe they are capable of.</b>":
       "<b>O The Chair Ultra nasceu para redefinir as provas de resistência e para te levar mais longe do que alguma vez achaste possível.</b>",
     "We believe distance is more than the kilometres you can run. It is the gap between what you think you can achieve and what you can actually do when you refuse to quit.":
       "Acreditamos que a distância é mais do que os quilómetros que consegues correr. É o espaço entre aquilo que achas que consegues e aquilo que realmente fazes quando te recusas a desistir.",
