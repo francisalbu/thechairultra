@@ -16,7 +16,7 @@
     "Lisbon": "Lisboa",
 
     // hero
-    "A new era of endurance races.": "Uma nova era de corridas de resistência.",
+    "A new era of endurance races.": "Uma nova era de provas de resistência.",
     "Redefine your distance.": "Redefine a tua distância.",
     "Discover our formats": "Descobre os nossos formatos",
 
