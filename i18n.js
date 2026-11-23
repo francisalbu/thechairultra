@@ -161,7 +161,7 @@
     "The Chair Ultra team will pick athletes based on their race history, their story and what they're chasing.": "A equipa The Chair Ultra escolhe atletas com base no seu historial de provas, na sua história e naquilo que procuram.",
     "Wildcard": "Wildcard",
     "Show us why you belong in the chair. Post a video on Instagram with <span class=\"hq-tag\">#thechairultra</span> and tag <span class=\"hq-tag\">@thechairultra</span>.": "Mostra-nos porque mereces um lugar na cadeira. Publica um vídeo no Instagram com <span class=\"hq-tag\">#thechairultra</span> e identifica <span class=\"hq-tag\">@thechairultra</span>.",
-    "Top 3<br><span class=\"tm\"><i>.</i>solo</span>": "Top 3<br><span class=\"tm\"><i>.</i>solo</span>",
+    "Top 3 <span class=\"tm\"><i>.</i>solo</span>": "Top 3 <span class=\"tm\"><i>.</i>solo</span>",
     "Top 3 Men": "Top 3 Homens",
     "Top 3 Women": "Top 3 Mulheres",
     "Qualify for": "Qualificam-se para",
