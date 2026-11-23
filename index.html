@@ -782,6 +782,20 @@
     .ap-dnl { font-size: clamp(48px, 10vw, 180px) !important; margin-top: 0 !important; }
     .ap-dnl small { display: block; margin-top: 18px; font-size: clamp(13px, 1.2vw, 18px); letter-spacing: .3em; color: #fffe00; }
     .ap-intro + .ap-intro { margin-top: 18px; }
+    .ap-split .sec-in { max-width: 1280px; text-align: left; }
+    .ap-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
+    @media (min-width: 900px) { .ap-grid { grid-template-columns: 1fr 1.1fr; gap: clamp(40px, 5vw, 80px); } }
+    .ap-split .if-list { margin: 14px 0 0; }
+    .ap-split .ap-bell { margin: 28px 0 0; }
+    .ap-left .if-list li { opacity: 0; transform: translateX(-24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+    .ap-left .if-list.in li { opacity: 1; transform: none; }
+    .ap-left .if-list.in li:nth-child(2) { transition-delay: .2s; }
+    .ap-chair { position: relative; overflow: hidden; margin: 0; aspect-ratio: 4 / 5; border-radius: 20px; }
+    .ap-chair .portal-bg { filter: grayscale(1) contrast(1.1); }
+    .ap-chair .portal-bg.ghost { filter: grayscale(1) blur(9px); }
+    .ap-chair::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(0,0,0,0) 40%, rgba(0,0,0,.6) 100%); }
+    .by .who img, .by .who .av { width: 84px !important; height: 84px !important; }
+    .by .who .av img { width: 100% !important; height: 100% !important; transform: none; }
   </style>
   <script>document.documentElement.classList.add("js");</script>
 <script src="/i18n.js" defer></script>
@@ -864,14 +878,19 @@
       <h2 class="ap-dnl rv">Introducing the DNL<small>(Did not leave)</small></h2>
     </div>
   </section>
-  <section class="sec apart" aria-label="DNL rules">
+  <section class="sec apart ap-split" aria-label="DNL rules">
     <div class="sec-in">
+      <div class="ap-grid">
+      <div class="ap-left">
       <p class="if rv">If:</p>
       <ul class="if-list rv">
         <li>You stayed in the comfort of the chair and didn't go to the corral.</li>
         <li>You walked up to the corral, crossed the start line, did some meters and turned around.</li>
       </ul>
       <p class="lede rv ap-bell">Runners who did not leave ring the quitting bell, seated in the chair at the start of the corral.</p>
+      </div>
+      <figure class="ap-chair rv" aria-hidden="true"><img class="portal-bg" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/magnific_use-this-but-zoom-in-and-close-up_EbAnIFGuuO%20(1).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9tYWduaWZpY191c2UtdGhpcy1idXQtem9vbS1pbi1hbmQtY2xvc2UtdXBfRWJBbklGR3V1TyAoMSkucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTQyOTcwOCwiZXhwIjoxODI2OTY1NzA4fQ.THb_L2Ld-AvCn_13o4G09LeLA3k4nc0BVK4fPK0qUxJfgBcB-XAlHjU-NVaGhzpvXaf0hbf96dTFIR1eHPKYOg" alt="" loading="lazy" decoding="async" /><img class="portal-bg ghost" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/magnific_use-this-but-zoom-in-and-close-up_EbAnIFGuuO%20(1).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9tYWduaWZpY191c2UtdGhpcy1idXQtem9vbS1pbi1hbmQtY2xvc2UtdXBfRWJBbklGR3V1TyAoMSkucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTQyOTcwOCwiZXhwIjoxODI2OTY1NzA4fQ.THb_L2Ld-AvCn_13o4G09LeLA3k4nc0BVK4fPK0qUxJfgBcB-XAlHjU-NVaGhzpvXaf0hbf96dTFIR1eHPKYOg" alt="" loading="lazy" decoding="async" /></figure>
+      </div>
       <dl class="ap-res rv">
         <div><dt>W</dt><dd>Last Person/Team standing</dd></div>
         <div><dt>DNF</dt><dd>Did not finish the loop in 1 hour but still completed the loop</dd></div>
@@ -959,14 +978,9 @@
   <section class="limit" id="limit">
     <div class="limit-bg"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/magnific__have-an-empty-space-in-the-background-like-a-trail__32555.png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9tYWduaWZpY19faGF2ZS1hbi1lbXB0eS1zcGFjZS1pbi10aGUtYmFja2dyb3VuZC1saWtlLWEtdHJhaWxfXzMyNTU1LnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM3OTM3NzAsImV4cCI6MTgyNTMyOTc3MH0.nNielKpFTFS0su85JDq43GiltUgewWCRDD0WanpBhmUZbVcabMSzwS3fWTr_XLnXuDz2RjIVMlu795SkW-1i_Q" alt="" loading="lazy" decoding="async" /></div>
     <div class="limit-in">
-      <p class="rv">"I PROMISE THAT,<br />
-LOOP AFTER LOOP,<br />
-I WILL REMEMBER<br />
-THE TIME I SACRIFICED,<br />
-AND THAT I WILL NOT QUIT<br />
-IN THIS FUCKING CHAIR."</p>
+      <p class="rv">"This is without a doubt the best way for you to challenge your beliefs, to change your perceptions about what you really can do."</p>
       <div class="by rv">
-        <div class="who"><span class="av"><img class="zoom" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/WhatsApp%20Image%202026-11-04%20at%2015.50.53.jpeg?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9XaGF0c0FwcCBJbWFnZSAyMDI2LTExLTA0IGF0IDE1LjUwLjUzLmpwZWciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzODA3NDcyLCJleHAiOjE4MjUzNDM0NzJ9.x8Qduj-gAeg8SU1f0C_Ngqz4fzaaqw_TGn3gMzEEYOgB7QnUFvDVAlMd0WW3yaJK51jvE1GRF98CnnF2Unid1A" alt="Francisco Albuquerque" loading="lazy" decoding="async" /></span><div><b>Francisco Albuquerque</b><span>Founder &amp; Creator Andamente</span></div></div>
+        <div class="who"><span class="av"><img class="zoom" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/DSC00913.JPG?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9EU0MwMDkxMy5KUEciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1NDI5ODIxLCJleHAiOjE4MjY5NjU4MjF9.d9sMLeh8Smn8N3VuDbmBqiJE_nj1TEGZwgu36RSQ_8FP3EJcacnf_51rGm6zPoFm2qn78pnVnwniPjwtSknhcA" alt="Francisco Albuquerque" loading="lazy" decoding="async" /></span><div><b>Francisco Albuquerque</b><span>Founder &amp; Creator Andamente</span></div></div>
         <div class="who"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/WhatsApp%20Image%202026-11-04%20at%2013.19.24.jpeg?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9XaGF0c0FwcCBJbWFnZSAyMDI2LTExLTA0IGF0IDEzLjE5LjI0LmpwZWciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzODA3MzI0LCJleHAiOjE4MjUzNDMzMjR9.lybdjOl4gmsaL-wTIKpKWDM_dvlYcTNP08lWqBxkpNLGRzdbHbG-xk2MHjpQUZpDr6X8TbJaH_Ldj6ZBeB35yQ" alt="Henrique Alves" loading="lazy" decoding="async" /><div><b>Henrique Alves</b><span>Founder &amp; Ultra athlete</span></div></div>
       </div>
     </div>

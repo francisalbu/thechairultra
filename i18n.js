@@ -56,6 +56,7 @@
     // founders
     "\"I PROMISE THAT,<br> LOOP AFTER LOOP,<br> I WILL REMEMBER<br> THE TIME I SACRIFICED,<br> AND THAT I WILL NOT QUIT<br> IN THIS FUCKING CHAIR.\"":
       "\"PROMETO QUE,<br> VOLTA APÓS VOLTA,<br> VOU LEMBRAR-ME<br> DO TEMPO QUE SACRIFIQUEI,<br> E QUE NÃO VOU DESISTIR<br> NESTA MALDITA CADEIRA.\"",
+    "\"This is without a doubt the best way for you to challenge your beliefs, to change your perceptions about what you really can do.\"": "\"Esta é, sem dúvida, a melhor forma de desafiares as tuas crenças e mudares a perceção sobre aquilo que realmente consegues fazer.\"",
     "Founder &amp; Creator Andamente": "Fundador &amp; Criador Andamente",
     "Founder &amp; Ultra athlete": "Fundador &amp; Atleta de ultra",
 
