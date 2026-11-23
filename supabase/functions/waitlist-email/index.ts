@@ -29,7 +29,7 @@ const IMG_BASE = "https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/pub
 const COPY = {
   en: {
     subject: "Welcome to the new era of endurance racing",
-    img: `${IMG_BASE}/waitlist-v2.png`,
+    img: `${IMG_BASE}/waitlist-v3.png`,
     preheader: "You're on the waitlist for thechair.24 — Lisbon, Spring 2027.",
     alt: "Welcome to the new era of endurance racing. Thank you for joining the waitlist for thechair.24, taking place in Lisbon in Spring 2027. You'll be notified 24 hours early when registrations open, giving you the chance to sign up for the race before anyone else. Get ready to redefine your distance. The Chair Ultra",
     footer: `You're receiving this email because you joined the thechair.24 waitlist at <a href="${SITE}" style="color:#8a8984;">thechairultra.com</a>.<br />Questions? Just reply to this email. To unsubscribe, reply with "unsubscribe".<br />The Chair Ultra · Lisbon, Portugal`,
@@ -48,7 +48,7 @@ You're receiving this email because you joined the thechair.24 waitlist. To unsu
   },
   pt: {
     subject: "Bem-vindo à nova era das provas de resistência",
-    img: `${IMG_BASE}/waitlist-pt-v2.png`,
+    img: `${IMG_BASE}/waitlist-pt-v3.png`,
     preheader: "Estás na waitlist do thechair.24 — Lisboa, primavera de 2027.",
     alt: "Bem-vindo à nova era das provas de resistência. Obrigado por te juntares à waitlist do thechair.24, que vai acontecer em Lisboa na primavera de 2027. Vais ser avisado 24 horas antes da abertura das inscrições, para te poderes inscrever na prova antes de toda a gente. Prepara-te para redefinir a tua distância. The Chair Ultra",
     footer: `Recebeste este e-mail porque te juntaste à waitlist do thechair.24 em <a href="${SITE}" style="color:#8a8984;">thechairultra.com</a>.<br />Dúvidas? Responde a este e-mail. Para deixares de receber, responde com "cancelar".<br />The Chair Ultra · Lisboa, Portugal`,
@@ -87,13 +87,6 @@ function html(lang: Lang): string {
       <a href="${SITE}" style="display:block;max-width:600px;text-decoration:none;">
         <img src="${c.img}" alt="${c.alt}" width="600" style="display:block;width:100%;max-width:600px;height:auto;border:0;background:${INK};color:${BONE};font-family:${FONT};font-size:16px;line-height:1.5;" />
       </a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" bgcolor="${INK}" style="background:${INK};padding:0 24px 40px;">
-      <p style="max-width:520px;margin:0 auto;font-family:${FONT};font-size:12px;line-height:1.6;color:#8a8984;text-align:center;">
-        ${c.footer}
-      </p>
     </td>
   </tr>
 </table>
