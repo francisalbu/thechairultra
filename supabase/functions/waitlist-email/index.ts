@@ -49,6 +49,15 @@ function html(): string {
       </a>
     </td>
   </tr>
+  <tr>
+    <td align="center" bgcolor="${INK}" style="background:${INK};padding:0 24px 40px;">
+      <p style="max-width:520px;margin:0 auto;font-family:${FONT};font-size:12px;line-height:1.6;color:#8a8984;text-align:center;">
+        You're receiving this email because you joined the thechair.24 waitlist at <a href="${SITE}" style="color:#8a8984;">thechairultra.com</a>.<br />
+        Questions? Just reply to this email. To unsubscribe, reply with "unsubscribe".<br />
+        The Chair Ultra · Lisbon, Portugal
+      </p>
+    </td>
+  </tr>
 </table>
 </body>
 </html>`;
@@ -63,7 +72,11 @@ You’ll be notified 24 hours early when registrations open, giving you the chan
 Get ready to redefine your distance.
 
 The Chair Ultra
-${SITE}`;
+${SITE}
+
+You're receiving this email because you joined the thechair.24 waitlist. To unsubscribe, reply with "unsubscribe".`;
+
+const REPLY_TO = Deno.env.get("MAIL_REPLY_TO") ?? "hello@thechairultra.com";
 
 Deno.serve(async (req) => {
   if (req.method !== "POST") return new Response("Method not allowed", { status: 405 });
@@ -79,7 +92,15 @@ Deno.serve(async (req) => {
   const r = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${RESEND_KEY}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ from: MAIL_FROM, to: [email], subject: SUBJECT, html: html(), text: TEXT }),
+    body: JSON.stringify({
+      from: MAIL_FROM,
+      to: [email],
+      reply_to: REPLY_TO,
+      subject: SUBJECT,
+      html: html(),
+      text: TEXT,
+      headers: { "List-Unsubscribe": `<mailto:${REPLY_TO}?subject=unsubscribe>` },
+    }),
   });
 
   if (!r.ok) {

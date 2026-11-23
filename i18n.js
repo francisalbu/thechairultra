@@ -111,6 +111,7 @@
     "<span>Sign up</span>": "<span>Inscrever</span>",
     "You're in.": "Estás dentro.",
     "Check your inbox. We'll be in touch before anyone else.": "Verifica o teu email. Vamos falar contigo antes de toda a gente.",
+    "Can't find it? Check your spam or promotions folder.": "Não encontras? Vê a pasta de spam ou promoções.",
 
     // 24h
     "<span class=\"inl-logo\"><img></span> is a 24 hour last person standing race, in the heart of the city. You run as many loops as you can, <span class=\"tm\"><i>.</i>solo</span>, in <span class=\"tm\"><i>.</i>duos</span> or in <span class=\"tm\"><i>.</i>crews</span> of 4. It's competition, it's community, and it's your chance to go further than you ever have.":
