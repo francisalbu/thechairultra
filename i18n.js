@@ -145,6 +145,9 @@
     "One loop.<br>No limit.": "Uma volta.<br>Sem limite.",
     "It's just you against everyone else, and yourself.": "És só tu contra todos os outros, e contra ti próprio.",
     "No time limit. The race goes on until only one runner remains.": "Sem limite de tempo. A corrida continua até restar apenas um atleta.",
+    "Direct entry": "Entrada direta",
+    "Men &amp; Women": "Masculino &amp; Feminino",
+    "The top 3 men and top 3 women of the <span class=\"tm\"><i>.</i>solo</span> race qualify for": "Os 3 primeiros homens e as 3 primeiras mulheres da prova <span class=\"tm\"><i>.</i>solo</span> qualificam-se para",
     "How far will you go?": "Até onde vais?"
   };
   var PH = { "First name": "Nome", "Last name": "Apelido", "Your email": "O teu email", "Search your country…": "Pesquisa o teu país…", "Search your district…": "Pesquisa o teu distrito…" };

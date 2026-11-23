@@ -790,6 +790,19 @@
     .combo input { padding-left: 30px !important; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' stroke='%23f1f0ea' stroke-opacity='.6' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='8' cy='8' r='6'/%3E%3Cpath d='M17 17l-4.5-4.5'/%3E%3C/svg%3E") no-repeat 0 50% !important; }
     .combo.has-flag input { padding-left: 34px !important; background-image: none !important; }
     .combo input:focus { border-bottom-color: #fffe00; }
+    .mods-title, .pick { font-style: normal !important; text-transform: uppercase; letter-spacing: -.035em !important; line-height: .95 !important; }
+    .mods-title { font-size: clamp(40px, 7.4vw, 120px) !important; }
+    .fp-qual { text-align: center; }
+    .fp-qual .sec-in { display: flex; flex-direction: column; align-items: center; }
+    .fp-qual .kicker { color: #fffe00; }
+    .q-title { font-weight: 800; text-transform: uppercase; letter-spacing: -.035em; line-height: .95; font-size: clamp(48px, 9vw, 150px); }
+    .q-title .tm { font-family: "Codec Pro", "Helvetica Neue", Arial, sans-serif; font-style: italic; font-weight: 400; text-transform: none; color: #FFFC00; }
+    .q-title .tm i { color: #fff; font-style: italic; }
+    .q-sub { margin-top: 14px; font-size: 13px; letter-spacing: .3em; text-transform: uppercase; color: var(--mute); }
+    .q-text { margin-top: clamp(28px, 4vw, 44px); font-size: clamp(18px, 2vw, 26px); line-height: 1.4; max-width: 30ch; }
+    .q-logo { position: relative; overflow: hidden; width: clamp(280px, 52vw, 720px); aspect-ratio: 1380 / 300; margin-top: 18px; }
+    .q-logo img { position: absolute; left: -24.5%; top: 50%; width: 145%; height: auto; transform: translateY(-50%); }
+    .q-date { margin-top: 14px; font-weight: 800; font-size: clamp(22px, 3vw, 40px); text-transform: uppercase; }
   </style>
   <script>document.documentElement.classList.add("js");</script>
 <script src="/i18n.js" defer></script>
@@ -900,6 +913,18 @@
       </div>
       <p class="pick rv">Which one are you going to pick?</p>
       <button class="wl-cta pick-btn rv" type="button" data-wl>Join the waitlist</button>
+    </div>
+  </section>
+
+  <!-- QUALIFY -->
+  <section class="sec fp-qual" id="qualify">
+    <div class="sec-in">
+      <p class="kicker rv">Direct entry</p>
+      <h2 class="q-title rv">Top 3 <span class="tm"><i>.</i>solo</span></h2>
+      <p class="q-sub rv">Men &amp; Women</p>
+      <p class="q-text rv">The top 3 men and top 3 women of the <span class="tm"><i>.</i>solo</span> race qualify for</p>
+      <div class="q-logo rv"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(10).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDEwKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MDUzLCJleHAiOjE4MjY4NDAwNTN9.phr0sY3dnq_rGTzSAnEKVglVuMDooITzqMrJOZkI3fc2sStpr38SxLlgd9FPIc1swgxGD-K08oCHwca1KLpFjA" alt="The Chair Backyard Ultra" width="2000" height="2000" /></div>
+      <p class="q-date rv">Fall 2027</p>
     </div>
   </section>
 
