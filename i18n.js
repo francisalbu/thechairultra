@@ -29,7 +29,7 @@
 
     // about
     "<b>The Chair Ultra is a project designed to redefine endurance racing by challenging athletes to push beyond what they believe they are capable of.</b>":
-      "<b>O The Chair Ultra é um projeto criado para redefinir as provas de resistência, desafiando os atletas a ir além daquilo que acreditam ser capazes.</b>",
+      "<b>O The Chair Ultra é um projeto criado para redefinir as provas de resistência, que te vai desafiar a ires além daquilo que acreditas que és capaz.</b>",
     "We believe distance is more than the kilometres you can run. It is the gap between what you think you can achieve and what you can actually do when you refuse to quit.":
       "Acreditamos que a distância é mais do que os quilómetros que consegues correr. É o espaço entre aquilo que achas que consegues e aquilo que realmente fazes quando te recusas a desistir.",
     "<b>That is the distance you will redefine.</b>": "<b>É essa a distância que vais redefinir.</b>",
@@ -133,7 +133,7 @@
       "Ganha o último atleta em pé. Se passar das 24 horas, todos os atletas <span class=\"tm\"><i>.</i>solo</span> que restarem disputam uma 25.ª volta para decidir o vencedor <span class=\"tm\"><i>.</i>solo</span>.",
     "Runners can bring their supporting crew.": "Os atletas podem trazer a sua equipa de apoio.",
     "Pick your teammate and go beyond together.": "Escolhe o teu parceiro e vão mais longe juntos.",
-    "Define a strategy and take turns between loops.": "Definam uma estratégia e revezem-se entre voltas.",
+    "Define a strategy and take turns between loops.": "Definam uma estratégia e dividam as voltas.",
     "Last duo standing wins. If it goes past 24 hours, pick who runs the 25th loop to decide the <span class=\"tm\"><i>.</i>duos</span> winner.":
       "Ganha a última dupla em pé. Se passar das 24 horas, escolham quem corre a 25.ª volta para decidir o vencedor <span class=\"tm\"><i>.</i>duos</span>.",
     "Your team is your crew, no external assistance.": "A tua equipa é o teu apoio, sem assistência externa.",
