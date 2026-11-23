@@ -945,6 +945,22 @@
 #boot.out{opacity:0;visibility:hidden}
 html.booting,html.booting body{overflow:hidden}
 @keyframes bootp{0%,100%{opacity:.55;transform:scale(.97)}50%{opacity:1;transform:scale(1)}}
+
+.dnl{color:#fffe00}.dnl i{color:#f1f0ea!important;font-style:normal}
+.brand{text-transform:lowercase;font-weight:800;color:#f1f0ea;white-space:nowrap}.brand i{font-style:normal;color:#fffe00}
+#about .kicker{color:var(--mute)!important}
+.about-title{font-weight:800;text-transform:uppercase;letter-spacing:-.035em;line-height:.95;font-size:clamp(40px,6vw,96px);margin:0 0 28px}
+.ap-video{display:grid!important;place-items:center!important}
+.ap-v-in{margin:0 auto!important;width:100%;max-width:none!important;text-align:center!important;padding:0 4vw}
+.ap-dnl{font-size:clamp(34px,8.6vw,150px)!important;text-align:center}
+.pick{color:#f1f0ea!important}
+.by .who .av.hz img{transform:scale(1.5);transform-origin:50% 30%;object-position:50% 25%}
+.rule-win{grid-column:1/-1;border:1px solid rgba(255,254,0,.45)!important;border-radius:22px;padding:clamp(24px,3vw,40px)!important;background:linear-gradient(135deg,rgba(255,254,0,.08),rgba(255,255,255,.02))}
+.rule-win h3{font-size:clamp(30px,4vw,56px)!important;text-transform:uppercase;letter-spacing:-.03em;color:#fffe00}
+.rule-win .win2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.rule-win .win2 p{margin:0;padding:20px;border-radius:16px;background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.1)}
+.rule-win .win2 p b{display:block;font-size:clamp(18px,1.7vw,24px);margin-bottom:8px;color:#f1f0ea}
+@media(max-width:760px){.rule-win .win2{grid-template-columns:1fr}}
 </style>
   <script>document.documentElement.classList.add("js");</script>
 <script>window.POSTHOG_KEY = "phc_u4gX6nLBo4jYoRSVy8Cw829Xd5bKxY3a64ZGH3YacKXt"; window.POSTHOG_HOST = "https://eu.i.posthog.com";</script>
@@ -990,7 +1006,8 @@ html.booting,html.booting body{overflow:hidden}
   <section class="sec about" id="about">
     <div class="sec-in about-grid">
       <div class="about-text">
-        <h2 class="rv kicker">The concept</h2>
+        <p class="rv kicker">The concept</p>
+        <h2 class="rv about-title">Redefine your distance.</h2>
         <p class="lede rv"><b>The Chair is a project designed to redefine endurance racing by challenging athletes to push beyond what they believe they are capable of.</b></p>
         <p class="lede rv">We believe distance is more than the kilometres you can run. It is the gap between what you think you can achieve and what you can actually do when you refuse to quit.</p>
         <p class="lede rv"><b>That is the distance you will redefine.</b></p>
@@ -1050,8 +1067,8 @@ html.booting,html.booting body{overflow:hidden}
         <li>You stayed in the comfort of the chair and didn't go to the corral.</li>
         <li>You walked up to the corral, crossed the start line, did some meters and turned around.</li>
       </ul>
-      <p class="ap-verdict rv">You are a <span>DNL.</span></p>
-      <p class="lede rv ap-bell">Runners who <span class="hl-y">DNL.</span> ring the quitting bell, seated in the chair at the start of the corral.</p>
+      <p class="ap-verdict rv">You are a <span class="dnl"><i>.</i>DNL</span></p>
+      <p class="lede rv ap-bell">Runners who <span class="dnl"><i>.</i>DNL</span> ring the quitting bell, seated in the chair at the start of the corral.</p>
       </div>
       <figure class="ap-chair rv" aria-hidden="true"><img class="portal-bg" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/magnific_use-this-but-zoom-in-and-close-up_EbAnIFGuuO%20(1).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9tYWduaWZpY191c2UtdGhpcy1idXQtem9vbS1pbi1hbmQtY2xvc2UtdXBfRWJBbklGR3V1TyAoMSkucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTQyOTcwOCwiZXhwIjoxODI2OTY1NzA4fQ.THb_L2Ld-AvCn_13o4G09LeLA3k4nc0BVK4fPK0qUxJfgBcB-XAlHjU-NVaGhzpvXaf0hbf96dTFIR1eHPKYOg" alt="" loading="lazy" decoding="async" /><img class="portal-bg ghost" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/magnific_use-this-but-zoom-in-and-close-up_EbAnIFGuuO%20(1).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9tYWduaWZpY191c2UtdGhpcy1idXQtem9vbS1pbi1hbmQtY2xvc2UtdXBfRWJBbklGR3V1TyAoMSkucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTQyOTcwOCwiZXhwIjoxODI2OTY1NzA4fQ.THb_L2Ld-AvCn_13o4G09LeLA3k4nc0BVK4fPK0qUxJfgBcB-XAlHjU-NVaGhzpvXaf0hbf96dTFIR1eHPKYOg" alt="" loading="lazy" decoding="async" /></figure>
       </div>
@@ -1059,7 +1076,7 @@ html.booting,html.booting body{overflow:hidden}
       <dl class="ap-res rv">
         <div><dt>W</dt><dd>Last Person/Team standing</dd></div>
         <div><dt>DNF</dt><dd>Did not finish the loop in 1 hour but still completed the loop</dd></div>
-        <div><dt>DNL</dt><dd>Did not leave the chair/base to attempt to complete another loop</dd></div>
+        <div><dt><span class="dnl"><i>.</i>DNL</span></dt><dd>Did not leave the chair/base to attempt to complete another loop</dd></div>
       </dl>
     </div>
   </section>
@@ -1072,7 +1089,7 @@ html.booting,html.booting body{overflow:hidden}
       <p class="rv">"This is without a doubt the best way for you to challenge your beliefs, to change your perceptions about what you really can do."</p>
       <div class="by rv">
         <div class="who"><span class="av"><img class="zoom" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/Motivational%20Instagram%20Post%20(1080%20x%201080%20px).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9Nb3RpdmF0aW9uYWwgSW5zdGFncmFtIFBvc3QgKDEwODAgeCAxMDgwIHB4KS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1NDMzMTc5LCJleHAiOjE4MjY5NjkxNzl9.a_hG7aQ7lrhKkhKo63vJfYwDx25yS9WytUN-Z9QPKJi8ZBChYsBDuqBzdO9xD4ti7hlCXKEhFlmUTh2JfTU7QQ" alt="Francisco Albuquerque" loading="lazy" decoding="async" /></span><div><b>Francisco Albuquerque</b><span>Founder &amp; Creator Andamente</span></div></div>
-        <div class="who"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/WhatsApp%20Image%202026-11-04%20at%2013.19.24.jpeg?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9XaGF0c0FwcCBJbWFnZSAyMDI2LTExLTA0IGF0IDEzLjE5LjI0LmpwZWciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzODA3MzI0LCJleHAiOjE4MjUzNDMzMjR9.lybdjOl4gmsaL-wTIKpKWDM_dvlYcTNP08lWqBxkpNLGRzdbHbG-xk2MHjpQUZpDr6X8TbJaH_Ldj6ZBeB35yQ" alt="Henrique Alves" loading="lazy" decoding="async" /><div><b>Henrique Alves</b><span>Founder &amp; Ultra athlete</span></div></div>
+        <div class="who"><span class="av hz"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/WhatsApp%20Image%202026-11-04%20at%2013.19.24.jpeg?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9XaGF0c0FwcCBJbWFnZSAyMDI2LTExLTA0IGF0IDEzLjE5LjI0LmpwZWciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkzODA3MzI0LCJleHAiOjE4MjUzNDMzMjR9.lybdjOl4gmsaL-wTIKpKWDM_dvlYcTNP08lWqBxkpNLGRzdbHbG-xk2MHjpQUZpDr6X8TbJaH_Ldj6ZBeB35yQ" alt="Henrique Alves" loading="lazy" decoding="async" /></span><div><b>Henrique Alves</b><span>Founder &amp; Ultra athlete</span></div></div>
       </div>
     </div>
   </section>
@@ -1084,16 +1101,16 @@ html.booting,html.booting body{overflow:hidden}
       <p class="kicker rv">FAQ</p>
       <h2 class="faq-title rv">Questions.</h2>
       <details class="rv"><summary>What is a backyard ultra?</summary><p>A race format where every athlete runs the same 6.7 km loop, starting together every hour, on the hour. Miss the start and you're out. The last athlete standing wins.</p></details>
-      <details class="rv"><summary>What's the difference between The Chair 24 and The Chair Backyard Ultra?</summary><p>The Chair 24 lasts 24 hours and can be run solo, in duos or in crews of 4. The Chair Backyard Ultra has no time limit and is solo only. It ends when only one athlete remains.</p></details>
-      <details class="rv"><summary>How do I get into The Chair 24?</summary><p>It's open to everyone, but places are limited. Join the waitlist to get priority access when registration opens.</p></details>
-      <details class="rv"><summary>How do I get into The Chair Backyard Ultra?</summary><p>The top 3 men and the top 3 women in the <span class="tm"><i>.</i>solo</span> category at The Chair 24 earn a spot. The other places go by application or wildcard.</p></details>
-      <details class="rv"><summary>Where and when will it happen?</summary><p>Both races take place in Lisbon. The Chair 24 is planned for Spring 2027 and The Chair Backyard Ultra for Fall 2027. Exact dates will be announced to the waitlist first.</p></details>
+      <details class="rv"><summary>What's the difference between <span class="brand">thechair<i>.</i>24</span> and <span class="brand">thechair<i>.</i>byu</span>?</summary><p><span class="brand">thechair<i>.</i>24</span> lasts 24 hours and can be run solo, in duos or in crews of 4. <span class="brand">thechair<i>.</i>byu</span> has no time limit and is solo only. It ends when only one athlete remains.</p></details>
+      <details class="rv"><summary>How do I get into <span class="brand">thechair<i>.</i>24</span>?</summary><p>It's open to everyone, but places are limited. Join the waitlist to get priority access when registration opens.</p></details>
+      <details class="rv"><summary>How do I get into <span class="brand">thechair<i>.</i>byu</span>?</summary><p>The top 3 men and the top 3 women in the <span class="tm"><i>.</i>solo</span> category at <span class="brand">thechair<i>.</i>24</span> earn a spot. The other places go by application or wildcard.</p></details>
+      <details class="rv"><summary>Where and when will it happen?</summary><p>Both races take place in Lisbon. <span class="brand">thechair<i>.</i>24</span> is planned for Spring 2027 and <span class="brand">thechair<i>.</i>byu</span> for Fall 2027. Waitlist members will be able to register before everyone else.</p></details>
       <details class="rv"><summary>Do I need to be an ultra runner?</summary><p>No. You only need to be able to run 6.7 km in under an hour. How far you go after that depends on how long you refuse to quit.</p></details>
-      <details class="rv"><summary>What is a DNL?</summary><p>Did Not Leave. When the bell rings, you either don't start the next loop, or you start it and turn back after the first 20 metres. The chair took you out.</p></details>
+      <details class="rv"><summary>What is a <span class="dnl"><i>.</i>DNL</span>?</summary><p>Did Not Leave. When the bell rings, you either don't start the next loop, or you start it and turn back after the first 20 metres. The chair took you out.</p></details>
       <details class="rv"><summary>What is a DNF?</summary><p>Did Not Finish. You didn't complete the loop before the hour was up, so the clock took you out.</p></details>
       <details class="rv"><summary>Can I have a support crew?</summary><p>Solo runners can have a support crew. Duos can have one person. Crews of four run with no outside support.</p></details>
       <details class="rv"><summary>How do I sign up?</summary><p>Registration opens soon. Follow <span class="hq-tag">@thechairultra</span> and join the waitlist to be the first to know.</p></details>
-      <details class="rv"><summary>What happens if more than one runner completes the 24 hours?</summary><p>There's a 25th loop. The first to finish it wins The Chair 24.</p></details>
+      <details class="rv"><summary>What happens if more than one runner completes the 24 hours?</summary><p>There's a 25th loop. The first to finish it wins <span class="brand">thechair<i>.</i>24</span>.</p></details>
     </div>
   </section>
 

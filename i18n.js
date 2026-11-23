@@ -34,15 +34,15 @@
       "Acreditamos que a distância é mais do que os quilómetros que consegues correr. É o espaço entre aquilo que achas que consegues e aquilo que realmente fazes quando te recusas a desistir.",
     "<b>That is the distance you will redefine.</b>": "<b>É essa a distância que vais redefinir.</b>",
     "The concept": "O conceito",
-    "You are a <span>DNL.</span>": "És um <span>DNL.</span>",
-    "Official Race Codes": "Códigos oficiais da prova",
+    "You are a <span class=\"dnl\"><i>.</i>DNL</span>": "És um <span class=\"dnl\"><i>.</i>DNL</span>",
+    "Official Race Codes": "Conclusões oficiais da prova",
     "What sets us apart": "O que nos distingue",
     "Up until now, last person standing races only had 2 possible conclusions. <b>Last Person Standing</b> and <b>DNF</b> (did not finish).": "Até agora, as corridas last person standing tinham apenas 2 desfechos possíveis. <b>Last Person Standing</b> e <b>DNF</b> (did not finish).",
     "The Chair Ultra races provide a mental stimulus for runners to keep on going.": "As corridas The Chair Ultra dão aos atletas um estímulo mental para continuarem.",
     "Introducing the DNL<small>(Did not leave)</small>": "Apresentamos o DNL<small>(Did not leave)</small>",
     "*Did not Leave": "*Did not Leave (não saiu)",
     "You stayed in the comfort of the chair and didn't go to the corral.": "Ficaste no conforto da cadeira e não foste para o corral.",
-    "Runners who <span class=\"hl-y\">DNL.</span> ring the quitting bell, seated in the chair at the start of the corral.": "Os atletas que fazem <span class=\"hl-y\">DNL.</span> tocam o sino da desistência, sentados na cadeira à entrada do corral.",
+    "Runners who <span class=\"dnl\"><i>.</i>DNL</span> ring the quitting bell, seated in the chair at the start of the corral.": "Os atletas que fazem <span class=\"dnl\"><i>.</i>DNL</span> tocam o sino da desistência, sentados na cadeira à entrada do corral.",
     "Last Person/Team standing": "Último atleta/equipa em pé",
     "Did not finish the loop in 1 hour but still completed the loop": "Não terminou a volta em 1 hora, mas completou a volta",
     "Did not leave the chair/base to attempt to complete another loop": "Não saiu da cadeira/base para tentar completar outra volta",
@@ -59,7 +59,7 @@
     // founders
     "\"I PROMISE THAT,<br> LOOP AFTER LOOP,<br> I WILL REMEMBER<br> THE TIME I SACRIFICED,<br> AND THAT I WILL NOT QUIT<br> IN THIS FUCKING CHAIR.\"":
       "\"PROMETO QUE,<br> VOLTA APÓS VOLTA,<br> VOU LEMBRAR-ME<br> DO TEMPO QUE SACRIFIQUEI,<br> E QUE NÃO VOU DESISTIR<br> NESTA MALDITA CADEIRA.\"",
-    "\"This is without a doubt the best way for you to challenge your beliefs, to change your perceptions about what you really can do.\"": "\"Esta é, sem dúvida, a melhor forma de desafiares as tuas crenças e mudares a perceção sobre aquilo que realmente consegues fazer.\"",
+    "\"This is without a doubt the best way for you to challenge your beliefs, to change your perceptions about what you really can do.\"": "\"Esta é, sem dúvida, a melhor forma de te desafiares e mudares a perceção sobre aquilo que realmente consegues fazer.\"",
     "Founder &amp; Creator Andamente": "Fundador &amp; Criador Andamente",
     "Founder &amp; Ultra athlete": "Fundador &amp; Atleta de ultra",
 
@@ -68,20 +68,19 @@
     "What is a backyard ultra?": "O que é uma backyard ultra?",
     "A race format where every athlete runs the same 6.7 km loop, starting together every hour, on the hour. Miss the start and you're out. The last athlete standing wins.":
       "Um formato de corrida em que todos os atletas fazem a mesma volta de 6,7 km, partindo juntos de hora a hora. Falhas a partida e estás fora. Ganha o último atleta em pé.",
-    "What's the difference between The Chair 24 and The Chair Backyard Ultra?": "Qual é a diferença entre o The Chair 24 e o The Chair Backyard Ultra?",
-    "The Chair 24 lasts 24 hours and can be run solo, in duos or in crews of 4. The Chair Backyard Ultra has no time limit and is solo only. It ends when only one athlete remains.":
-      "O The Chair 24 dura 24 horas e pode ser corrido a solo, em duplas ou em equipas de 4. O The Chair Backyard Ultra não tem limite de tempo e é só a solo. Acaba quando resta apenas um atleta.",
-    "How do I get into The Chair 24?": "Como entro no The Chair 24?",
+    "What's the difference between <span class=\"brand\">thechair<i>.</i>24</span> and <span class=\"brand\">thechair<i>.</i>byu</span>?": "Qual é a diferença entre o <span class=\"brand\">thechair<i>.</i>24</span> e o <span class=\"brand\">thechair<i>.</i>byu</span>?",
+    "<span class=\"brand\">thechair<i>.</i>24</span> lasts 24 hours and can be run solo, in duos or in crews of 4. <span class=\"brand\">thechair<i>.</i>byu</span> has no time limit and is solo only. It ends when only one athlete remains.":
+      "O <span class=\"brand\">thechair<i>.</i>24</span> dura 24 horas e pode ser corrido a solo, em duplas ou em equipas de 4. O <span class=\"brand\">thechair<i>.</i>byu</span> não tem limite de tempo e é só a solo. Acaba quando resta apenas um atleta.",
+    "How do I get into <span class=\"brand\">thechair<i>.</i>24</span>?": "Como entro no <span class=\"brand\">thechair<i>.</i>24</span>?",
     "It's open to everyone, but places are limited. Join the waitlist to get priority access when registration opens.": "É aberto a todos, mas as vagas são limitadas. Junta-te à waitlist para teres acesso prioritário quando as inscrições abrirem.",
-    "How do I get into The Chair Backyard Ultra?": "Como entro no The Chair Backyard Ultra?",
-    "The top 3 men and the top 3 women in the <span class=\"tm\"><i>.</i>solo</span> category at The Chair 24 earn a spot. The other places go by application or wildcard.": "Os 3 primeiros homens e as 3 primeiras mulheres da categoria <span class=\"tm\"><i>.</i>solo</span> do The Chair 24 ganham um lugar. As restantes vagas são atribuídas por candidatura ou wildcard.",
+    "How do I get into <span class=\"brand\">thechair<i>.</i>byu</span>?": "Como entro no <span class=\"brand\">thechair<i>.</i>byu</span>?",
+    "The top 3 men and the top 3 women in the <span class=\"tm\"><i>.</i>solo</span> category at <span class=\"brand\">thechair<i>.</i>24</span> earn a spot. The other places go by application or wildcard.": "Os 3 primeiros homens e as 3 primeiras mulheres da categoria <span class=\"tm\"><i>.</i>solo</span> do <span class=\"brand\">thechair<i>.</i>24</span> ganham um lugar. As restantes vagas são atribuídas por candidatura ou wildcard.",
     "Where and when will it happen?": "Onde e quando vai acontecer?",
-    "Both races take place in Lisbon. The Chair 24 is planned for Spring 2027 and The Chair Backyard Ultra for Fall 2027. Exact dates will be announced to the waitlist first.":
-      "As duas provas são em Lisboa. O The Chair 24 está previsto para a primavera de 2027 e o The Chair Backyard Ultra para o outono de 2027. As datas exatas serão anunciadas primeiro à waitlist.",
+    "Both races take place in Lisbon. <span class=\"brand\">thechair<i>.</i>24</span> is planned for Spring 2027 and <span class=\"brand\">thechair<i>.</i>byu</span> for Fall 2027. Waitlist members will be able to register before everyone else.": "As duas provas são em Lisboa. O <span class=\"brand\">thechair<i>.</i>24</span> será na primavera de 2027 e o <span class=\"brand\">thechair<i>.</i>byu</span> no outono de 2027. As pessoas da waitlist vão conseguir fazer a inscrição mais cedo que as outras pessoas.",
     "Do I need to be an ultra runner?": "Preciso de ser ultramaratonista?",
     "No. You only need to be able to run 6.7 km in under an hour. How far you go after that depends on how long you refuse to quit.":
       "Não. Só precisas de conseguir correr 6,7 km em menos de uma hora. Até onde vais depois disso depende de quanto tempo te recusas a desistir.",
-    "What is a DNL?": "O que é um DNL?",
+    "What is a <span class=\"dnl\"><i>.</i>DNL</span>?": "O que é um <span class=\"dnl\"><i>.</i>DNL</span>?",
     "Did Not Leave. When the bell rings, you either don't start the next loop, or you start it and turn back after the first 20 metres. The chair took you out.": "Did Not Leave. Quando o sino toca, ou não começas a volta seguinte, ou começas e voltas para trás nos primeiros 20 metros. Foi a cadeira que te tirou da prova.",
     "What is a DNF?": "O que é um DNF?",
     "Did Not Finish. You didn't complete the loop before the hour was up, so the clock took you out.": "Did Not Finish. Não completaste a volta antes de acabar a hora, por isso foi o relógio que te tirou da prova.",
@@ -90,7 +89,7 @@
     "How do I sign up?": "Como me inscrevo?",
     "Registration opens soon. Follow <span class=\"hq-tag\">@thechairultra</span> and join the waitlist to be the first to know.": "As inscrições abrem em breve. Segue <span class=\"hq-tag\">@thechairultra</span> e junta-te à waitlist para seres o primeiro a saber.",
     "What happens if more than one runner completes the 24 hours?": "O que acontece se mais do que um atleta completar as 24 horas?",
-    "There's a 25th loop. The first to finish it wins The Chair 24.": "Há uma 25.ª volta. O primeiro a terminá-la ganha o The Chair 24.",
+    "There's a 25th loop. The first to finish it wins <span class=\"brand\">thechair<i>.</i>24</span>.": "Há uma 25.ª volta. O primeiro a terminá-la ganha o <span class=\"brand\">thechair<i>.</i>24</span>.",
 
     // partners
     "Build the first edition with us.": "Constrói connosco a primeira edição.",
@@ -123,8 +122,7 @@
     "Late means disqualification.": "Atrasado é desclassificado.",
     "Athletes who aren't in the start box when the next hour begins are disqualified.": "Os atletas que não estiverem na zona de partida quando começa a hora seguinte são desclassificados.",
     "Two ways to win.": "Duas formas de ganhar.",
-    "<b>Last Person Standing wins.</b> The race continues hour after hour until only one runner remains.":
-      "<b>Ganha o último em pé.</b> A corrida continua hora após hora até restar apenas um atleta.",
+    "<b>Last Person Standing wins.</b> The race continues hour after hour until only one athlete/team remains.": "<b>Ganha o último em pé.</b> A corrida continua hora após hora até restar apenas um atleta/equipa.",
     "<b><span class=\"hl\">.25th</span> lap - Winner takes it all.</b> If more than one runner makes it through 24 hours, there's one final loop. First to finish it wins.":
       "<b><span class=\"hl\">.25.ª</span> volta - O vencedor leva tudo.</b> Se mais do que um atleta chegar às 24 horas, há uma última volta. O primeiro a terminá-la ganha.",
     "The last athlete standing wins.": "Ganha o último atleta em pé.",
@@ -175,7 +173,7 @@
   };
   var PH = { "First name": "Nome", "Last name": "Apelido", "Your email": "O teu email", "Search your country…": "Pesquisa o teu país…", "Search your district…": "Pesquisa o teu distrito…" };
 
-  var SEL = "h1,h2,h3,h4,p,li,summary,a,button,option,legend,span,small,b";
+  var SEL = "h1,h2,h3,h4,p,li,summary,a,button,option,legend,span,small,b,dt,dd";
   var norm = function (h) { return h.replace(/<img\b[^>]*>/g, "<img>").replace(/\s+/g, " ").trim(); };
   var store = [];
 
