@@ -939,6 +939,12 @@
 #wl .field.sel select{font-size:16px!important;min-height:52px;-webkit-appearance:none;appearance:none}
 #wl .field.sel select:invalid{color:rgba(240,239,233,.5)}
 #wl .field.sel select option{background:#111;color:#f0efe9}
+
+#boot{position:fixed;inset:0;z-index:9999;background:#000;display:grid;place-items:center;transition:opacity .6s ease,visibility .6s}
+#boot img{width:min(46vw,220px);height:auto;animation:bootp 1.6s ease-in-out infinite}
+#boot.out{opacity:0;visibility:hidden}
+html.booting,html.booting body{overflow:hidden}
+@keyframes bootp{0%,100%{opacity:.55;transform:scale(.97)}50%{opacity:1;transform:scale(1)}}
 </style>
   <script>document.documentElement.classList.add("js");</script>
 <script>window.POSTHOG_KEY = "phc_u4gX6nLBo4jYoRSVy8Cw829Xd5bKxY3a64ZGH3YacKXt"; window.POSTHOG_HOST = "https://eu.i.posthog.com";</script>
@@ -946,6 +952,9 @@
 <script src="/i18n.js" defer></script>
 </head>
 <body>
+<div id="boot" aria-hidden="true"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/thechairultra_logo.png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGVjaGFpcnVsdHJhX2xvZ28ucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTMwMTUwMSwiZXhwIjoxODI2ODM3NTAxfQ.e5t2XPGPM9puTubhrk5SaiLAnt77rXID1hZncCbkUicJI1qiQiU3Z0iuiBhklca-cRDIpi23kfKjpqK7b3Gw7A" alt="" /></div>
+<script>(function(){var b=document.getElementById("boot"),seen=false;try{seen=localStorage.getItem("tc_boot")}catch(e){}if(seen){b.remove();return}try{localStorage.setItem("tc_boot","1")}catch(e){}var t0=Date.now(),fin=false;document.documentElement.classList.add("booting");function done(){if(fin)return;fin=true;setTimeout(function(){b.classList.add("out");document.documentElement.classList.remove("booting");setTimeout(function(){b.remove()},700)},Math.max(0,2200-(Date.now()-t0)))}if(document.readyState==="complete")done();else{addEventListener("load",done);setTimeout(done,4000)}})();</script>
+
 
   <header class="nav">
     <a class="nav-brand" href="#top" aria-label="The Chair"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair.png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzgxNzk1NywiZXhwIjoxODI1MzUzOTU3fQ.FfchtsL-3gxkMO9iYMWg78mnhLyRVxTOhNzy_uIgE0LVhSJ4syYt3VVzz96qfmS_N5jFPvP4BPb9Nvi_gtJTtg" alt="The Chair" /></a>
