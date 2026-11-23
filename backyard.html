@@ -793,6 +793,20 @@
     .combo input:focus { border-bottom-color: #fffe00; }
     .mods-title, .pick { font-style: normal !important; text-transform: uppercase; letter-spacing: -.035em !important; line-height: .95 !important; }
     .mods-title { font-size: clamp(40px, 7.4vw, 120px) !important; }
+    .hq .sec-in { text-align: center; }
+    .hq-title { font-weight: 800; text-transform: uppercase; letter-spacing: -.035em; line-height: .95; font-size: clamp(40px, 7.4vw, 120px); margin-bottom: clamp(32px, 4vw, 56px); }
+    .hq-grid { display: grid; grid-template-columns: 1fr; gap: 16px; text-align: left; }
+    @media (min-width: 900px) { .hq-grid { grid-template-columns: 1.6fr 1fr 1fr; } }
+    .hq-card { position: relative; display: flex; flex-direction: column; gap: 12px; padding: clamp(28px, 3vw, 44px); border: 1px solid rgba(241,240,234,.14); border-radius: 20px; background: rgba(241,240,234,.04); }
+    .hq-card h3 { font-weight: 800; text-transform: uppercase; letter-spacing: -.03em; line-height: 1; font-size: clamp(26px, 2.6vw, 40px); }
+    .hq-card p { color: rgba(241,240,234,.75); font-size: clamp(15px, 1.3vw, 18px); line-height: 1.45; }
+    .hq-n { font-size: 12px; letter-spacing: .2em; color: #fffe00; }
+    .hq-main { border-color: #fffe00; background: rgba(255,254,0,.06); }
+    .hq-main h3 { font-size: clamp(32px, 3.6vw, 58px); }
+    .hq-k { color: #fffe00 !important; font-size: 12px !important; letter-spacing: .28em; text-transform: uppercase; }
+    .hq-logo { position: relative; overflow: hidden; width: min(420px, 100%); aspect-ratio: 1380 / 300; }
+    .hq-logo img { position: absolute; left: -24.5%; top: 50%; width: 145%; height: auto; transform: translateY(-50%); }
+    .hq-d { font-weight: 800; text-transform: uppercase; color: var(--bone) !important; }
   </style>
   <script>document.documentElement.classList.add("js");</script>
 <script src="/i18n.js" defer></script>
@@ -885,6 +899,33 @@
       </div>
       <p class="pick rv">How far will you go?</p>
       <button class="wl-cta pick-btn rv" type="button" data-wl>Join the waitlist</button>
+    </div>
+  </section>
+
+  <!-- HOW TO QUALIFY -->
+  <section class="sec hq" id="qualify">
+    <div class="sec-in">
+      <h2 class="hq-title rv">How to qualify</h2>
+      <div class="hq-grid">
+        <div class="hq-card hq-main rv">
+          <span class="hq-n">01</span>
+          <p class="hq-k">Direct entry</p>
+          <h3>Top 3 men &amp; Top 3 women</h3>
+          <p>of the <span class="tm"><i>.</i>solo</span> race at</p>
+          <div class="hq-logo"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(11).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDExKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MzA3LCJleHAiOjE4MjY4NDAzMDd9.jzAYFBHKuRpI343Yr5RCim_5peoXXIF1b8gCTad617wye_vLyNse0Dvn7G0POVtv9rC_HWu9-Tohfc8OtJfcVQ" alt="The Chair 24" width="2000" height="2000" /></div>
+          <p class="hq-d">Spring 2027</p>
+        </div>
+        <div class="hq-card rv">
+          <span class="hq-n">02</span>
+          <h3>Lottery</h3>
+          <p>Join the waitlist and enter the draw for the remaining spots.</p>
+        </div>
+        <div class="hq-card rv">
+          <span class="hq-n">03</span>
+          <h3>Wildcard</h3>
+          <p>A limited number of spots invited by The Chair.</p>
+        </div>
+      </div>
     </div>
   </section>
 
