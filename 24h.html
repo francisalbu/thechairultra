@@ -922,6 +922,14 @@
     #wl.overlay { z-index: 200; }
     body.wl-lock { position: fixed; left: 0; right: 0; width: 100%; overflow: hidden; }
     @media (max-width: 639px) { #wl .wl-sheet { overflow-y: auto; touch-action: pan-y; } }
+    /* waitlist mobile: sem botão flutuante, folha estável */
+    @media (max-width: 639px) {
+      #wl .wl-sheet { top: 0 !important; bottom: 0 !important; height: auto !important; }
+      #wl #s-btn { position: static !important; box-shadow: none !important; margin-top: 22px !important; }
+      #wl .wl-step-in { padding-bottom: 2px; }
+      #wl .wl-step.on { animation: wlStep .5s var(--ease); }
+    }
+    @keyframes wlStep { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
   </style>
   <script>document.documentElement.classList.add("js");</script>
 <script>window.POSTHOG_KEY = "phc_u4gX6nLBo4jYoRSVy8Cw829Xd5bKxY3a64ZGH3YacKXt"; window.POSTHOG_HOST = "https://eu.i.posthog.com";</script>
@@ -1008,6 +1016,25 @@
     </div>
   </section>
 
+  <!-- QUALIFY -->
+  <section class="sec fp-qual" id="qualify">
+    <div class="sec-in">
+      <div class="qx rv">
+        <div class="qx-l">
+          <p class="qx-k">Direct entry</p>
+          <h2 class="qx-t">Top 3<br /><span class="tm"><i>.</i>solo</span></h2>
+          <div class="qx-chips"><span>Top 3 Men</span><span>Top 3 Women</span></div>
+        </div>
+        <div class="qx-arrow" aria-hidden="true"><svg viewBox="0 0 64 24" fill="none" stroke="#fffe00" stroke-width="1.5" stroke-linecap="round"><path d="M2 12h58M50 3l10 9-10 9"/></svg></div>
+        <div class="qx-r">
+          <p class="qx-s">Qualify for</p>
+          <div class="qx-logo"><img loading="lazy" decoding="async" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(10).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDEwKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MDUzLCJleHAiOjE4MjY4NDAwNTN9.phr0sY3dnq_rGTzSAnEKVglVuMDooITzqMrJOZkI3fc2sStpr38SxLlgd9FPIc1swgxGD-K08oCHwca1KLpFjA" alt="The Chair Backyard Ultra" width="2000" height="2000" /></div>
+          <p class="qx-d">Fall 2027 · Lisbon</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- STRATEGY -->
   <section class="sec fp-strat" id="strategy">
     <div class="strat-bg" aria-hidden="true"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/magnific_it-169-and-even-more-blurred_YMg0F8yWeC.png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9tYWduaWZpY19pdC0xNjktYW5kLWV2ZW4tbW9yZS1ibHVycmVkX1lNZzBGOHlXZUMucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5NTMxMzUxNSwiZXhwIjoxODI2ODQ5NTE1fQ.4Zu7Y-S3--DZi6ESVyK-oKHha7xvrHzy5ZuP6v2UuXJPkGuShrwsm12OsYVQjT5t_JCNp1hDG1roDQY5qDUqKQ" alt="" loading="lazy" decoding="async" /></div>
@@ -1043,25 +1070,6 @@
       </div>
       <p class="pick rv">Which one are you going to pick?</p>
       <button class="wl-cta pick-btn rv" type="button" data-wl>Join the waitlist</button>
-    </div>
-  </section>
-
-  <!-- QUALIFY -->
-  <section class="sec fp-qual" id="qualify">
-    <div class="sec-in">
-      <div class="qx rv">
-        <div class="qx-l">
-          <p class="qx-k">Direct entry</p>
-          <h2 class="qx-t">Top 3<br /><span class="tm"><i>.</i>solo</span></h2>
-          <div class="qx-chips"><span>Top 3 Men</span><span>Top 3 Women</span></div>
-        </div>
-        <div class="qx-arrow" aria-hidden="true"><svg viewBox="0 0 64 24" fill="none" stroke="#fffe00" stroke-width="1.5" stroke-linecap="round"><path d="M2 12h58M50 3l10 9-10 9"/></svg></div>
-        <div class="qx-r">
-          <p class="qx-s">Qualify for</p>
-          <div class="qx-logo"><img loading="lazy" decoding="async" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(10).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDEwKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MDUzLCJleHAiOjE4MjY4NDAwNTN9.phr0sY3dnq_rGTzSAnEKVglVuMDooITzqMrJOZkI3fc2sStpr38SxLlgd9FPIc1swgxGD-K08oCHwca1KLpFjA" alt="The Chair Backyard Ultra" width="2000" height="2000" /></div>
-          <p class="qx-d">Fall 2027 · Lisbon</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -1398,7 +1406,7 @@
       // teclado: ajusta à área visível (iOS)
       var vv = window.visualViewport;
       var fit = function () { if (!vv) return; wl.style.setProperty("--vvh", vv.height + "px"); wl.style.setProperty("--vvt", vv.offsetTop + "px"); };
-      if (vv) { vv.addEventListener("resize", fit); vv.addEventListener("scroll", fit); fit(); }
+      
       f.addEventListener("focusin", function (e) {
         if (!e.target.matches("input, select")) return;
         setTimeout(function () { var r = e.target.getBoundingClientRect(), sr = sheet.getBoundingClientRect(); var d = r.top - (sr.top + sr.height * 0.35); if (Math.abs(d) > 40) sheet.scrollTo({ top: sheet.scrollTop + d, behavior: "smooth" }); }, 320);

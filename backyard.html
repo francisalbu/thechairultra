@@ -911,6 +911,14 @@
     #wl.overlay { z-index: 200; }
     body.wl-lock { position: fixed; left: 0; right: 0; width: 100%; overflow: hidden; }
     @media (max-width: 639px) { #wl .wl-sheet { overflow-y: auto; touch-action: pan-y; } }
+    /* waitlist mobile: sem botão flutuante, folha estável */
+    @media (max-width: 639px) {
+      #wl .wl-sheet { top: 0 !important; bottom: 0 !important; height: auto !important; }
+      #wl #s-btn { position: static !important; box-shadow: none !important; margin-top: 22px !important; }
+      #wl .wl-step-in { padding-bottom: 2px; }
+      #wl .wl-step.on { animation: wlStep .5s var(--ease); }
+    }
+    @keyframes wlStep { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
   </style>
   <script>document.documentElement.classList.add("js");</script>
 <script>window.POSTHOG_KEY = "phc_u4gX6nLBo4jYoRSVy8Cw829Xd5bKxY3a64ZGH3YacKXt"; window.POSTHOG_HOST = "https://eu.i.posthog.com";</script>
@@ -1375,7 +1383,7 @@
       // teclado: ajusta à área visível (iOS)
       var vv = window.visualViewport;
       var fit = function () { if (!vv) return; wl.style.setProperty("--vvh", vv.height + "px"); wl.style.setProperty("--vvt", vv.offsetTop + "px"); };
-      if (vv) { vv.addEventListener("resize", fit); vv.addEventListener("scroll", fit); fit(); }
+      
       f.addEventListener("focusin", function (e) {
         if (!e.target.matches("input, select")) return;
         setTimeout(function () { var r = e.target.getBoundingClientRect(), sr = sheet.getBoundingClientRect(); var d = r.top - (sr.top + sr.height * 0.35); if (Math.abs(d) > 40) sheet.scrollTo({ top: sheet.scrollTop + d, behavior: "smooth" }); }, 320);

@@ -925,6 +925,14 @@
     body.wl-lock { position: fixed; left: 0; right: 0; width: 100%; overflow: hidden; }
     @media (max-width: 639px) { #wl .wl-sheet { overflow-y: auto; touch-action: pan-y; } }
     .hq-tag { font-family: "Codec Pro", "Helvetica Neue", Arial, sans-serif !important; font-weight: 400 !important; color: #fffe00; white-space: nowrap; }
+    /* waitlist mobile: sem botão flutuante, folha estável */
+    @media (max-width: 639px) {
+      #wl .wl-sheet { top: 0 !important; bottom: 0 !important; height: auto !important; }
+      #wl #s-btn { position: static !important; box-shadow: none !important; margin-top: 22px !important; }
+      #wl .wl-step-in { padding-bottom: 2px; }
+      #wl .wl-step.on { animation: wlStep .5s var(--ease); }
+    }
+    @keyframes wlStep { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
   </style>
   <script>document.documentElement.classList.add("js");</script>
 <script>window.POSTHOG_KEY = "phc_u4gX6nLBo4jYoRSVy8Cw829Xd5bKxY3a64ZGH3YacKXt"; window.POSTHOG_HOST = "https://eu.i.posthog.com";</script>
@@ -1062,6 +1070,8 @@
       <h2 class="faq-title rv">Questions.</h2>
       <details class="rv"><summary>What is a backyard ultra?</summary><p>A race format where every athlete runs the same 6.7 km loop, starting together every hour, on the hour. Miss the start and you're out. The last athlete standing wins.</p></details>
       <details class="rv"><summary>What's the difference between The Chair 24 and The Chair Backyard Ultra?</summary><p>The Chair 24 lasts 24 hours and can be run solo, in duos or in crews of 4. The Chair Backyard Ultra has no time limit and is solo only. It ends when only one athlete remains.</p></details>
+      <details class="rv"><summary>How do I get into The Chair 24?</summary><p>It's open to everyone, but places are limited. Join the waitlist to get priority access when registration opens.</p></details>
+      <details class="rv"><summary>How do I get into The Chair Backyard Ultra?</summary><p>The top 3 men and the top 3 women in the <span class="tm"><i>.</i>solo</span> category at The Chair 24 earn a spot. The other places go by application or wildcard.</p></details>
       <details class="rv"><summary>Where and when will it happen?</summary><p>Both races take place in Lisbon. The Chair 24 is planned for Spring 2027 and The Chair Backyard Ultra for Fall 2027. Exact dates will be announced to the waitlist first.</p></details>
       <details class="rv"><summary>Do I need to be an ultra runner?</summary><p>No. You only need to be able to run 6.7 km in under an hour. How far you go after that depends on how long you refuse to quit.</p></details>
       <details class="rv"><summary>What is a DNL?</summary><p>Did Not Leave. When the bell rings, you either don't start the next loop, or you start it and turn back after the first 20 metres. The chair took you out.</p></details>
@@ -1418,7 +1428,7 @@
       // teclado: ajusta à área visível (iOS)
       var vv = window.visualViewport;
       var fit = function () { if (!vv) return; wl.style.setProperty("--vvh", vv.height + "px"); wl.style.setProperty("--vvt", vv.offsetTop + "px"); };
-      if (vv) { vv.addEventListener("resize", fit); vv.addEventListener("scroll", fit); fit(); }
+      
       f.addEventListener("focusin", function (e) {
         if (!e.target.matches("input, select")) return;
         setTimeout(function () { var r = e.target.getBoundingClientRect(), sr = sheet.getBoundingClientRect(); var d = r.top - (sr.top + sr.height * 0.35); if (Math.abs(d) > 40) sheet.scrollTo({ top: sheet.scrollTop + d, behavior: "smooth" }); }, 320);

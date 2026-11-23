@@ -71,6 +71,10 @@
     "What's the difference between The Chair 24 and The Chair Backyard Ultra?": "Qual é a diferença entre o The Chair 24 e o The Chair Backyard Ultra?",
     "The Chair 24 lasts 24 hours and can be run solo, in duos or in crews of 4. The Chair Backyard Ultra has no time limit and is solo only. It ends when only one athlete remains.":
       "O The Chair 24 dura 24 horas e pode ser corrido a solo, em duplas ou em equipas de 4. O The Chair Backyard Ultra não tem limite de tempo e é só a solo. Acaba quando resta apenas um atleta.",
+    "How do I get into The Chair 24?": "Como entro no The Chair 24?",
+    "It's open to everyone, but places are limited. Join the waitlist to get priority access when registration opens.": "É aberto a todos, mas as vagas são limitadas. Junta-te à waitlist para teres acesso prioritário quando as inscrições abrirem.",
+    "How do I get into The Chair Backyard Ultra?": "Como entro no The Chair Backyard Ultra?",
+    "The top 3 men and the top 3 women in the <span class=\"tm\"><i>.</i>solo</span> category at The Chair 24 earn a spot. The other places go by application or wildcard.": "Os 3 primeiros homens e as 3 primeiras mulheres da categoria <span class=\"tm\"><i>.</i>solo</span> do The Chair 24 ganham um lugar. As restantes vagas são atribuídas por candidatura ou wildcard.",
     "Where and when will it happen?": "Onde e quando vai acontecer?",
     "Both races take place in Lisbon. The Chair 24 is planned for Spring 2027 and The Chair Backyard Ultra for Fall 2027. Exact dates will be announced to the waitlist first.":
       "As duas provas são em Lisboa. O The Chair 24 está previsto para a primavera de 2027 e o The Chair Backyard Ultra para o outono de 2027. As datas exatas serão anunciadas primeiro à waitlist.",
