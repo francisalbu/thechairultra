@@ -16,7 +16,7 @@
     "Lisbon": "Lisboa",
 
     // hero
-    "A new era of last person standing races.": "Uma nova era das corridas last person standing.",
+    "A new era of endurance races.": "Uma nova era de corridas de resistência.",
     "Redefine your distance.": "Redefine a tua distância.",
     "Discover our formats": "Descobre os nossos formatos",
 
@@ -68,15 +68,15 @@
     "What is a backyard ultra?": "O que é uma backyard ultra?",
     "A race format where every athlete runs the same 6.7 km loop, starting together every hour, on the hour. Miss the start and you're out. The last athlete standing wins.":
       "Um formato de corrida em que todos os atletas fazem a mesma volta de 6,7 km, partindo juntos de hora a hora. Falhas a partida e estás fora. Ganha o último atleta em pé.",
-    "What's the difference between <span class=\"brand\">thechair<i>.</i>24</span> and <span class=\"brand\">thechair<i>.</i>byu</span>?": "Qual é a diferença entre o <span class=\"brand\">thechair<i>.</i>24</span> e o <span class=\"brand\">thechair<i>.</i>byu</span>?",
-    "<span class=\"brand\">thechair<i>.</i>24</span> lasts 24 hours and can be run solo, in duos or in crews of 4. <span class=\"brand\">thechair<i>.</i>byu</span> has no time limit and is solo only. It ends when only one athlete remains.":
-      "O <span class=\"brand\">thechair<i>.</i>24</span> dura 24 horas e pode ser corrido a solo, em duplas ou em equipas de 4. O <span class=\"brand\">thechair<i>.</i>byu</span> não tem limite de tempo e é só a solo. Acaba quando resta apenas um atleta.",
-    "How do I get into <span class=\"brand\">thechair<i>.</i>24</span>?": "Como entro no <span class=\"brand\">thechair<i>.</i>24</span>?",
+    "What's the difference between <img> and <img>?": "Qual é a diferença entre o <img> e o <img>?",
+    "<img> lasts 24 hours and can be run solo, in duos or in crews of 4. <img> has no time limit and is solo only. It ends when only one athlete remains.":
+      "O <img> dura 24 horas e pode ser corrido a solo, em duplas ou em equipas de 4. O <img> não tem limite de tempo e é só a solo. Acaba quando resta apenas um atleta.",
+    "How do I get into <img>?": "Como entro no <img>?",
     "It's open to everyone, but places are limited. Join the waitlist to get priority access when registration opens.": "É aberto a todos, mas as vagas são limitadas. Junta-te à waitlist para teres acesso prioritário quando as inscrições abrirem.",
-    "How do I get into <span class=\"brand\">thechair<i>.</i>byu</span>?": "Como entro no <span class=\"brand\">thechair<i>.</i>byu</span>?",
-    "The top 3 men and the top 3 women in the <span class=\"tm\"><i>.</i>solo</span> category at <span class=\"brand\">thechair<i>.</i>24</span> earn a spot. The other places go by application or wildcard.": "Os 3 primeiros homens e as 3 primeiras mulheres da categoria <span class=\"tm\"><i>.</i>solo</span> do <span class=\"brand\">thechair<i>.</i>24</span> ganham um lugar. As restantes vagas são atribuídas por candidatura ou wildcard.",
+    "How do I get into <img>?": "Como entro no <img>?",
+    "The top 3 men and the top 3 women in the <span class=\"tm\"><i>.</i>solo</span> category at <img> earn a spot. The other places go by application or wildcard.": "Os 3 primeiros homens e as 3 primeiras mulheres da categoria <span class=\"tm\"><i>.</i>solo</span> do <img> ganham um lugar. As restantes vagas são atribuídas por candidatura ou wildcard.",
     "Where and when will it happen?": "Onde e quando vai acontecer?",
-    "Both races take place in Lisbon. <span class=\"brand\">thechair<i>.</i>24</span> is planned for Spring 2027 and <span class=\"brand\">thechair<i>.</i>byu</span> for Fall 2027. Waitlist members will be able to register before everyone else.": "As duas provas são em Lisboa. O <span class=\"brand\">thechair<i>.</i>24</span> será na primavera de 2027 e o <span class=\"brand\">thechair<i>.</i>byu</span> no outono de 2027. As pessoas da waitlist vão conseguir fazer a inscrição mais cedo que as outras pessoas.",
+    "Both races take place in Lisbon. <img> is planned for Spring 2027 and <img> for Fall 2027. Waitlist members will be able to register before everyone else.": "As duas provas são em Lisboa. O <img> será na primavera de 2027 e o <img> no outono de 2027. As pessoas da waitlist vão conseguir fazer a inscrição mais cedo que as outras pessoas.",
     "Do I need to be an ultra runner?": "Preciso de ser ultramaratonista?",
     "No. You only need to be able to run 6.7 km in under an hour. How far you go after that depends on how long you refuse to quit.":
       "Não. Só precisas de conseguir correr 6,7 km em menos de uma hora. Até onde vais depois disso depende de quanto tempo te recusas a desistir.",
@@ -89,7 +89,7 @@
     "How do I sign up?": "Como me inscrevo?",
     "Registration opens soon. Follow <span class=\"hq-tag\">@thechairultra</span> and join the waitlist to be the first to know.": "As inscrições abrem em breve. Segue <span class=\"hq-tag\">@thechairultra</span> e junta-te à waitlist para seres o primeiro a saber.",
     "What happens if more than one runner completes the 24 hours?": "O que acontece se mais do que um atleta completar as 24 horas?",
-    "There's a 25th loop. The first to finish it wins <span class=\"brand\">thechair<i>.</i>24</span>.": "Há uma 25.ª volta. O primeiro a terminá-la ganha o <span class=\"brand\">thechair<i>.</i>24</span>.",
+    "There's a 25th loop. The first to finish it wins <img>.": "Há uma 25.ª volta. O primeiro a terminá-la ganha o <img>.",
 
     // partners
     "Build the first edition with us.": "Constrói connosco a primeira edição.",
