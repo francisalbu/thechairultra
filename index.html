@@ -745,6 +745,14 @@
     #about .about-text { max-width: 760px; margin: 0 auto; }
     #about .lede { margin-left: auto; margin-right: auto; }
     #about .about-photo { width: min(560px, 100%); margin: 0 auto; }
+    /* concept: foto a ocupar a secção, texto por cima */
+    #about { position: relative; isolation: isolate; overflow: hidden; min-height: 100svh; display: flex; align-items: center; }
+    #about .about-grid { position: static; width: 100%; }
+    #about .about-text { position: relative; z-index: 2; }
+    #about .kicker { color: #fffe00; }
+    #about .about-photo { position: absolute !important; inset: 0; width: 100% !important; max-width: none; height: 100%; margin: 0; border-radius: 0; z-index: 0; opacity: .35 !important; transform: none !important; clip-path: none !important; aspect-ratio: auto; }
+    #about .about-photo .about-logo { display: none; }
+    #about::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg, #000 0%, rgba(0,0,0,.35) 22%, rgba(0,0,0,.35) 78%, #000 100%); }
   </style>
   <script>document.documentElement.classList.add("js");</script>
 <script src="/i18n.js" defer></script>
