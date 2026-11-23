@@ -807,6 +807,16 @@
     .hq-logo { position: relative; overflow: hidden; width: min(420px, 100%); aspect-ratio: 1380 / 300; }
     .hq-logo img { position: absolute; left: -24.5%; top: 50%; width: 145%; height: auto; transform: translateY(-50%); }
     .hq-d { font-weight: 800; text-transform: uppercase; color: var(--bone) !important; }
+    /* dropdown Formats */
+    .nav, .nav-links { overflow: visible; }
+    .nav-dd { position: relative; display: flex; align-items: center; }
+    .nav-dd-menu { position: absolute; top: 100%; left: 50%; transform: translate(-50%, 6px); padding-top: 14px; opacity: 0; visibility: hidden; transition: opacity .25s, transform .25s, visibility .25s; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+    .nav-dd-in { display: flex; flex-direction: column; gap: 6px; padding: 10px; border-radius: 16px; background: rgba(20,20,20,.85); -webkit-backdrop-filter: blur(22px) saturate(180%); backdrop-filter: blur(22px) saturate(180%); border: 1px solid rgba(255,255,255,.18); box-shadow: 0 20px 50px -15px rgba(0,0,0,.7); }
+    .nav-dd-in a { display: block; padding: 10px 14px; border-radius: 10px; transition: background .2s; }
+    .nav-dd-in a:hover { background: rgba(255,254,0,.1); }
+    .nav-dd-logo { position: relative; overflow: hidden; width: 220px; aspect-ratio: 1380 / 300; }
+    .nav-dd-logo img { position: absolute; left: -24.5%; top: 50%; width: 145%; height: auto; transform: translateY(-50%); }
   </style>
   <script>document.documentElement.classList.add("js");</script>
 <script src="/i18n.js" defer></script>
@@ -816,7 +826,7 @@
   <header class="nav">
     <a class="nav-brand" href="/#top" aria-label="The Chair"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair.png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzgxNzk1NywiZXhwIjoxODI1MzUzOTU3fQ.FfchtsL-3gxkMO9iYMWg78mnhLyRVxTOhNzy_uIgE0LVhSJ4syYt3VVzz96qfmS_N5jFPvP4BPb9Nvi_gtJTtg" alt="The Chair" /></a>
     <nav class="nav-links" aria-label="Main">
-      <a href="/#formats">Formats</a>
+      <div class="nav-dd"><a href="/#formats">Formats</a><div class="nav-dd-menu"><div class="nav-dd-in"><a href="24h.html" aria-label="The Chair 24"><span class="nav-dd-logo"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(11).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDExKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MzA3LCJleHAiOjE4MjY4NDAzMDd9.jzAYFBHKuRpI343Yr5RCim_5peoXXIF1b8gCTad617wye_vLyNse0Dvn7G0POVtv9rC_HWu9-Tohfc8OtJfcVQ" alt="" /></span></a><a href="backyard.html" aria-label="The Chair Backyard Ultra"><span class="nav-dd-logo"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(10).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDEwKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MDUzLCJleHAiOjE4MjY4NDAwNTN9.phr0sY3dnq_rGTzSAnEKVglVuMDooITzqMrJOZkI3fc2sStpr38SxLlgd9FPIc1swgxGD-K08oCHwca1KLpFjA" alt="" /></span></a></div></div></div>
       <a href="/#about">About</a>
       <a href="/#faq">FAQ</a>
       <a href="/#partners">Partners</a>
