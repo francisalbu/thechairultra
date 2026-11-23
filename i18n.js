@@ -28,8 +28,8 @@
       "Uma backyard ultra tradicional.<br>Voltas de 6,7 km, de hora a hora.<br>Sem limite de tempo. Ganha o último em pé.",
 
     // about
-    "<b>The Chair is a project designed to redefine endurance racing by challenging athletes to push beyond what they believe they are capable of.</b>":
-      "<b>O The Chair é um projeto criado para redefinir as provas de resistência, desafiando os atletas a ir além daquilo que acreditam ser capazes.</b>",
+    "<b>The Chair Ultra is a project designed to redefine endurance racing by challenging athletes to push beyond what they believe they are capable of.</b>":
+      "<b>O The Chair Ultra é um projeto criado para redefinir as provas de resistência, desafiando os atletas a ir além daquilo que acreditam ser capazes.</b>",
     "We believe distance is more than the kilometres you can run. It is the gap between what you think you can achieve and what you can actually do when you refuse to quit.":
       "Acreditamos que a distância é mais do que os quilómetros que consegues correr. É o espaço entre aquilo que achas que consegues e aquilo que realmente fazes quando te recusas a desistir.",
     "<b>That is the distance you will redefine.</b>": "<b>É essa a distância que vais redefinir.</b>",
@@ -158,7 +158,7 @@
     "Top 3 men &amp; Top 3 women": "Top 3 masculino &amp; Top 3 feminino",
     "of the <span class=\"tm\"><i>.</i>solo</span> race at": "da prova <span class=\"tm\"><i>.</i>solo</span> no",
     "Application": "Candidatura",
-    "The Chair team will pick athletes based on their race history, their story and what they're chasing.": "A equipa The Chair escolhe atletas com base no seu historial de provas, na sua história e naquilo que procuram.",
+    "The Chair Ultra team will pick athletes based on their race history, their story and what they're chasing.": "A equipa The Chair Ultra escolhe atletas com base no seu historial de provas, na sua história e naquilo que procuram.",
     "Wildcard": "Wildcard",
     "Show us why you belong in the chair. Post a video on Instagram with <span class=\"hq-tag\">#thechairultra</span> and tag <span class=\"hq-tag\">@thechairultra</span>.": "Mostra-nos porque mereces um lugar na cadeira. Publica um vídeo no Instagram com <span class=\"hq-tag\">#thechairultra</span> e identifica <span class=\"hq-tag\">@thechairultra</span>.",
     "Top 3<br><span class=\"tm\"><i>.</i>solo</span>": "Top 3<br><span class=\"tm\"><i>.</i>solo</span>",
