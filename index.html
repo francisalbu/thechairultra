@@ -458,6 +458,9 @@
     @keyframes pbA { from { transform: translate3d(-3%,0,0) scale(1.04); } to { transform: translate3d(3%,0,0) scale(1.1); } }
     @keyframes pbB { from { transform: translate3d(5%,0,0) scale(1.08); } to { transform: translate3d(-5%,0,0) scale(1.04); } }
     @media (prefers-reduced-motion: reduce) { .portal-bg { animation: none; } }
+    .fp-bg { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
+    .fp-bg .portal-bg { filter: grayscale(1); }
+    .fp-bg .portal-bg.ghost { filter: grayscale(1) blur(9px); }
     .portal-shade { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35) 50%, rgba(0,0,0,.6)); }
     .portal-title { position: relative; z-index: 1; text-align: center; font-weight: 800; text-transform: uppercase; letter-spacing: -.04em; line-height: .92; font-size: clamp(44px, 9vw, 150px); will-change: transform, opacity; }
     .portal-cue { position: absolute; bottom: clamp(28px, 5vh, 56px); left: 0; right: 0; text-align: center; font-size: 11px; letter-spacing: .32em; text-transform: uppercase; color: var(--mute); }
@@ -753,7 +756,7 @@
 
   <!-- HERO -->
   <section class="hero" id="top">
-    <video class="bg" autoplay muted loop playsinline preload="auto" aria-hidden="true" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/b5a88998-54e4-4a61-8c48-d2e7a24bb61e%20(1).mp4?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9iNWE4ODk5OC01NGU0LTRhNjEtOGM0OC1kMmU3YTI0YmI2MWUgKDEpLm1wNCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM3MjU5MTgsImV4cCI6MTgyNTI2MTkxOH0.lcdfWMYsZakdVaF19LOzSxj4RRGcmpbPu447197veNIEH-dovXs9ju-GEPh6RWtbkO5LCOSIjIiNr1DMH4zFZg"></video>
+    <div class="fp-bg" aria-hidden="true"><img class="portal-bg" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/magnific_img4-but-4k_xSoZnWYjfW.png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9tYWduaWZpY19pbWc0LWJ1dC00a194U29abldZamZXLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTU0Mjc4MDAsImV4cCI6MTgyNjk2MzgwMH0.a5yW0SbUfaOdKN_EkmDvJtGmOAW7vZ3jU2NTojE8kGenvHpH2IxzjaH1W9VfZQDvO74ylsiNqIC60uAIcSVZRw" alt="" decoding="async" fetchpriority="high" /><img class="portal-bg ghost" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/magnific_img4-but-4k_xSoZnWYjfW.png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9tYWduaWZpY19pbWc0LWJ1dC00a194U29abldZamZXLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTU0Mjc4MDAsImV4cCI6MTgyNjk2MzgwMH0.a5yW0SbUfaOdKN_EkmDvJtGmOAW7vZ3jU2NTojE8kGenvHpH2IxzjaH1W9VfZQDvO74ylsiNqIC60uAIcSVZRw" alt="" decoding="async" /><div class="portal-shade"></div></div>
     <div class="hero-center">
       <p class="hero-sub">Redefine your distance.</p>
       <a class="hero-btn" href="#formats">Discover our formats</a>
