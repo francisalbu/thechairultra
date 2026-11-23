@@ -174,7 +174,7 @@
   var PH = { "First name": "Nome", "Last name": "Apelido", "Your email": "O teu email", "Search your country…": "Pesquisa o teu país…", "Search your district…": "Pesquisa o teu distrito…" };
 
   var SEL = "h1,h2,h3,h4,p,li,summary,a,button,option,legend,span,small,b,dt,dd";
-  var norm = function (h) { return h.replace(/<img\b[^>]*>/g, "<img>").replace(/\s+/g, " ").trim(); };
+  var norm = function (h) { return h.replace(/<span class="wm"[^>]*>.*?<\/span>/g, "<img>").replace(/<img\b[^>]*>/g, "<img>").replace(/\s+/g, " ").trim(); };
   var store = [];
 
   function collect() {
@@ -183,7 +183,7 @@
       var k = norm(el.innerHTML);
       if (!T[k]) return;
       // não traduzir um pai se um filho já tem tradução própria
-      var imgs = Array.prototype.map.call(el.querySelectorAll("img"), function (i) { return i.outerHTML; });
+      var imgs = Array.prototype.map.call(el.querySelectorAll("img,.wm"), function (i) { return i.outerHTML; });
       store.push({ el: el, en: el.innerHTML, pt: T[k].replace(/<img>/g, function () { return imgs.shift() || ""; }) });
     });
     document.querySelectorAll("[placeholder]").forEach(function (el) {
