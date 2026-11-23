@@ -780,6 +780,7 @@
     .see-other:hover { border-color: var(--bone); }
   </style>
   <script>document.documentElement.classList.add("js");</script>
+<script src="/i18n.js" defer></script>
 </head>
 <body>
 
@@ -1124,7 +1125,7 @@
         signup.style.display = "none";
         $("#s-done").style.display = "block";
       } catch (ex) {
-        err.textContent = "Something went wrong. Please try again.";
+        err.textContent = window.LANG === "pt" ? "Algo correu mal. Tenta novamente." : "Something went wrong. Please try again.";
         err.style.display = "block";
       } finally { btn.disabled = false; }
     });
