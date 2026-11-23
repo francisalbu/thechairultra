@@ -33,6 +33,16 @@
       "Acreditamos que a distância é mais do que os quilómetros que consegues correr. É o espaço entre aquilo que achas que consegues e aquilo que realmente fazes quando te recusas a desistir.",
     "<b>That is the distance you will redefine.</b>": "<b>É essa a distância que vais redefinir.</b>",
     "The concept": "O conceito",
+    "What sets us apart": "O que nos distingue",
+    "Up until now, last person standing races only had 2 possible conclusions. <b>Last Person Standing</b> and <b>DNF</b> (did not finish).": "Até agora, as corridas last person standing tinham apenas 2 desfechos possíveis. <b>Last Person Standing</b> e <b>DNF</b> (did not finish).",
+    "The Chair Ultra races provide a mental stimulus for runners to keep on going.": "As corridas The Chair Ultra dão aos atletas um estímulo mental para continuarem.",
+    "Introducing the DNL<sup>*</sup>": "Apresentamos o DNL<sup>*</sup>",
+    "*Did not Leave": "*Did not Leave (não saiu)",
+    "You stayed in the comfort of the chair and didn't go to the corral.": "Ficaste no conforto da cadeira e não foste para o corral.",
+    "Runners who did not leave ring the quitting bell, seated in the chair at the start of the corral.": "Quem não sai toca o sino da desistência, sentado na cadeira à entrada do corral.",
+    "Last Person/Team standing": "Último atleta/equipa em pé",
+    "Did not finish the loop in 1 hour but still completed the loop": "Não terminou a volta em 1 hora, mas completou a volta",
+    "Did not leave the chair/base to attempt to complete another loop": "Não saiu da cadeira/base para tentar completar outra volta",
 
     // DNT
     "Introducing the DNT.<small>(Did not try)</small>": "Apresentamos o DNT.<small>(Did not try)</small>",
