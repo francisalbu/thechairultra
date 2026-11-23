@@ -11,6 +11,15 @@
     return;
   }
 
+  var consent = null;
+  try { consent = localStorage.getItem("cookie-consent"); } catch (e) {}
+  if (consent !== "accepted") {
+    document.addEventListener("cookie-consent", function (e) { if (e.detail === "accepted") load(); });
+    return;
+  }
+  load();
+
+  function load() {
   import("https://esm.sh/posthog-js")
     .then(function (module) {
       var posthog = module.default;
@@ -23,4 +32,5 @@
     .catch(function (error) {
       if (isDevelopment) console.error("PostHog failed to initialize", error);
     });
+  }
 })();
