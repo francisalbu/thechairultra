@@ -29,7 +29,7 @@
 
     // about
     "<b>The Chair Ultra is a project designed to redefine endurance racing by challenging athletes to push beyond what they believe they are capable of.</b>":
-      "<b>O The Chair Ultra é um projeto criado para redefinir as provas de resistência, que te vai desafiar a ires além daquilo que acreditas que és capaz.</b>",
+      "<b>O The Chair Ultra nasceu para redefinir as provas de resistência e para te levar mais longe do que alguma vez achaste possível.</b>",
     "We believe distance is more than the kilometres you can run. It is the gap between what you think you can achieve and what you can actually do when you refuse to quit.":
       "Acreditamos que a distância é mais do que os quilómetros que consegues correr. É o espaço entre aquilo que achas que consegues e aquilo que realmente fazes quando te recusas a desistir.",
     "<b>That is the distance you will redefine.</b>": "<b>É essa a distância que vais redefinir.</b>",
@@ -122,6 +122,9 @@
     "Arrive before the bell.": "Chega antes do sino.",
     "Athletes who aren't in the start box when the next hour begins drop out of the race.": "Os atletas que não estiverem na zona de partida quando começa a hora seguinte abandonam a prova.",
     "Two ways to win.": "Duas formas de ganhar.",
+    "<em>01</em><b>Last person/team wins.</b> The race continues hour after hour until only one athlete/team remains.": "<em>01</em><b>Last person/team ganha.</b> A corrida continua hora após hora até restar apenas um atleta/equipa.",
+    "<em>02</em><b><span class=\"hl\"><i>.</i>25<small>th</small></span> lap - All or nothing.</b> If more than one athlete/team remains after 24 hours, a 25th loop is run. The first to finish in each category wins.":
+      "<em>02</em><b><span class=\"hl\"><i>.</i>25<small>th</small></span> lap - Tudo ou nada.</b> Se mais do que um atleta/equipa restar após as 24 horas, é realizado um 25.º loop. O primeiro a chegar de cada modalidade vence.",
     "<b>Last person/team wins.</b> The race continues hour after hour until only one athlete/team remains.": "<b>Last person/team ganha.</b> A corrida continua hora após hora até restar apenas um atleta/equipa.",
     "<b><span class=\"hl\"><i>.</i>25<small>th</small></span> lap - All or nothing.</b> If more than one athlete/team remains after 24 hours, a 25th loop is run. The first to finish in each category wins.":
       "<b><span class=\"hl\"><i>.</i>25<small>th</small></span> lap - Tudo ou nada.</b> Se mais do que um atleta/equipa restar após as 24 horas, é realizado um 25.º loop. O primeiro a chegar de cada modalidade vence.",
