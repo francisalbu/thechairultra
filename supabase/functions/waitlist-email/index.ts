@@ -25,7 +25,7 @@ const SUBJECT = "Welcome to the new era of endurance racing";
 
 // O corpo do e-mail é uma única imagem (media/email-waitlist.png): o Gmail no telemóvel
 // inverte cores de texto/fundos em modo escuro, mas nunca mexe em imagens.
-const BODY_IMG = `${SITE}/media/email-waitlist.png`;
+const BODY_IMG = "https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/public/email/waitlist-v1.png";
 const ALT = "Welcome to the new era of endurance racing. Thank you for joining the waitlist for thechair.24, taking place in Lisbon in Spring 2027. You'll be notified 24 hours early when registrations open, giving you the chance to sign up for the race before anyone else. Get ready to redefine your distance. The Chair Ultra";
 
 function html(): string {
