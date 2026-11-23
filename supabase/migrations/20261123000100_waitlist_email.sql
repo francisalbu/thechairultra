@@ -33,7 +33,7 @@ begin
       'Content-Type', 'application/json',
       'x-hook-secret', hook
     ),
-    body    := jsonb_build_object('record', jsonb_build_object('email', new.email))
+    body    := jsonb_build_object('record', jsonb_build_object('email', new.email, 'lang', new.lang))
   );
   return new;
 end;

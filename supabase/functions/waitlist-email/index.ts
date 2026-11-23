@@ -21,49 +21,19 @@ const MUTE = "#a3a29d";
 // Fontes do sistema (sem licenças, iguais em todos os clientes de e-mail)
 const FONT = `Helvetica,Arial,sans-serif`;
 
-const SUBJECT = "Welcome to the new era of endurance racing";
+type Lang = "en" | "pt";
+const IMG_BASE = "https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/public/email";
 
-// O corpo do e-mail é uma única imagem (media/email-waitlist.png): o Gmail no telemóvel
+// O corpo do e-mail é uma única imagem (media/email-waitlist*.png): o Gmail no telemóvel
 // inverte cores de texto/fundos em modo escuro, mas nunca mexe em imagens.
-const BODY_IMG = "https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/public/email/waitlist-v1.png";
-const ALT = "Welcome to the new era of endurance racing. Thank you for joining the waitlist for thechair.24, taking place in Lisbon in Spring 2027. You'll be notified 24 hours early when registrations open, giving you the chance to sign up for the race before anyone else. Get ready to redefine your distance. The Chair Ultra";
-
-function html(): string {
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="color-scheme" content="only dark" />
-<meta name="supported-color-schemes" content="dark" />
-<title>${SUBJECT}</title>
-<style>html,body{margin:0!important;padding:0!important;background:${INK}!important}</style>
-</head>
-<body bgcolor="${INK}" style="margin:0;padding:0;background:${INK};">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;">You're on the waitlist for thechair.24 — Lisbon, Spring 2027.</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${INK}" style="background:${INK};">
-  <tr>
-    <td align="center" bgcolor="${INK}" style="background:${INK};padding:0;">
-      <a href="${SITE}" style="display:block;max-width:600px;text-decoration:none;">
-        <img src="${BODY_IMG}" alt="${ALT}" width="600" style="display:block;width:100%;max-width:600px;height:auto;border:0;background:${INK};color:${BONE};font-family:${FONT};font-size:16px;line-height:1.5;" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" bgcolor="${INK}" style="background:${INK};padding:0 24px 40px;">
-      <p style="max-width:520px;margin:0 auto;font-family:${FONT};font-size:12px;line-height:1.6;color:#8a8984;text-align:center;">
-        You're receiving this email because you joined the thechair.24 waitlist at <a href="${SITE}" style="color:#8a8984;">thechairultra.com</a>.<br />
-        Questions? Just reply to this email. To unsubscribe, reply with "unsubscribe".<br />
-        The Chair Ultra · Lisbon, Portugal
-      </p>
-    </td>
-  </tr>
-</table>
-</body>
-</html>`;
-}
-
-const TEXT = `WELCOME TO THE NEW ERA OF ENDURANCE RACING
+const COPY = {
+  en: {
+    subject: "Welcome to the new era of endurance racing",
+    img: `${IMG_BASE}/waitlist-v2.png`,
+    preheader: "You're on the waitlist for thechair.24 — Lisbon, Spring 2027.",
+    alt: "Welcome to the new era of endurance racing. Thank you for joining the waitlist for thechair.24, taking place in Lisbon in Spring 2027. You'll be notified 24 hours early when registrations open, giving you the chance to sign up for the race before anyone else. Get ready to redefine your distance. The Chair Ultra",
+    footer: `You're receiving this email because you joined the thechair.24 waitlist at <a href="${SITE}" style="color:#8a8984;">thechairultra.com</a>.<br />Questions? Just reply to this email. To unsubscribe, reply with "unsubscribe".<br />The Chair Ultra · Lisbon, Portugal`,
+    text: `WELCOME TO THE NEW ERA OF ENDURANCE RACING
 
 Thank you for joining the waitlist for thechair.24, taking place in Lisbon in Spring 2027.
 
@@ -74,7 +44,62 @@ Get ready to redefine your distance.
 The Chair Ultra
 ${SITE}
 
-You're receiving this email because you joined the thechair.24 waitlist. To unsubscribe, reply with "unsubscribe".`;
+You're receiving this email because you joined the thechair.24 waitlist. To unsubscribe, reply with "unsubscribe".`,
+  },
+  pt: {
+    subject: "Bem-vindo à nova era das provas de resistência",
+    img: `${IMG_BASE}/waitlist-pt-v2.png`,
+    preheader: "Estás na waitlist do thechair.24 — Lisboa, primavera de 2027.",
+    alt: "Bem-vindo à nova era das provas de resistência. Obrigado por te juntares à waitlist do thechair.24, que vai acontecer em Lisboa na primavera de 2027. Vais ser avisado 24 horas antes da abertura das inscrições, para te poderes inscrever na prova antes de toda a gente. Prepara-te para redefinir a tua distância. The Chair Ultra",
+    footer: `Recebeste este e-mail porque te juntaste à waitlist do thechair.24 em <a href="${SITE}" style="color:#8a8984;">thechairultra.com</a>.<br />Dúvidas? Responde a este e-mail. Para deixares de receber, responde com "cancelar".<br />The Chair Ultra · Lisboa, Portugal`,
+    text: `BEM-VINDO À NOVA ERA DAS PROVAS DE RESISTÊNCIA
+
+Obrigado por te juntares à waitlist do thechair.24, que vai acontecer em Lisboa na primavera de 2027.
+
+Vais ser avisado 24 horas antes da abertura das inscrições, para te poderes inscrever na prova antes de toda a gente.
+
+Prepara-te para redefinir a tua distância.
+
+The Chair Ultra
+${SITE}
+
+Recebeste este e-mail porque te juntaste à waitlist do thechair.24. Para deixares de receber, responde com "cancelar".`,
+  },
+} as const;
+
+function html(lang: Lang): string {
+  const c = COPY[lang];
+  return `<!DOCTYPE html>
+<html lang="${lang}">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="only dark" />
+<meta name="supported-color-schemes" content="dark" />
+<title>${c.subject}</title>
+<style>html,body{margin:0!important;padding:0!important;background:${INK}!important}</style>
+</head>
+<body bgcolor="${INK}" style="margin:0;padding:0;background:${INK};">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">${c.preheader}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${INK}" style="background:${INK};">
+  <tr>
+    <td align="center" bgcolor="${INK}" style="background:${INK};padding:0;">
+      <a href="${SITE}" style="display:block;max-width:600px;text-decoration:none;">
+        <img src="${c.img}" alt="${c.alt}" width="600" style="display:block;width:100%;max-width:600px;height:auto;border:0;background:${INK};color:${BONE};font-family:${FONT};font-size:16px;line-height:1.5;" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="${INK}" style="background:${INK};padding:0 24px 40px;">
+      <p style="max-width:520px;margin:0 auto;font-family:${FONT};font-size:12px;line-height:1.6;color:#8a8984;text-align:center;">
+        ${c.footer}
+      </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>`;
+}
 
 const REPLY_TO = Deno.env.get("MAIL_REPLY_TO") ?? "hello@thechairultra.com";
 
@@ -88,6 +113,8 @@ Deno.serve(async (req) => {
   const body = await req.json().catch(() => null);
   const email: string | undefined = body?.record?.email;
   if (!email) return new Response("No email", { status: 400 });
+  const lang: Lang = body?.record?.lang === "pt" ? "pt" : "en";
+  const c = COPY[lang];
 
   const r = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -96,9 +123,9 @@ Deno.serve(async (req) => {
       from: MAIL_FROM,
       to: [email],
       reply_to: REPLY_TO,
-      subject: SUBJECT,
-      html: html(),
-      text: TEXT,
+      subject: c.subject,
+      html: html(lang),
+      text: c.text,
       headers: { "List-Unsubscribe": `<mailto:${REPLY_TO}?subject=unsubscribe>` },
     }),
   });
