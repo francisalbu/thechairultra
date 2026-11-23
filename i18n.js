@@ -16,6 +16,7 @@
     "Lisbon": "Lisboa",
 
     // hero
+    "A new era of last person standing races.": "Uma nova era das corridas last person standing.",
     "Redefine your distance.": "Redefine a tua distância.",
     "Discover our formats": "Descobre os nossos formatos",
 
