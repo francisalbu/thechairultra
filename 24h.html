@@ -14,6 +14,8 @@
   <link rel="preconnect" href="https://exxqaluncgpzbopeikdh.supabase.co" crossorigin />
   <link rel="preconnect" href="https://esm.sh" crossorigin />
 
+  <link rel="preload" href="fonts/CodecPro-Regular.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="preload" href="fonts/Codec-Warm-ExtraBold-trial.ttf" as="font" type="font/ttf" crossorigin />
   <style>
     /* Números e símbolos: sempre Codec Pro Regular (licença web) */
     @font-face { font-family: "Codec Num"; src: url("fonts/CodecPro-Regular.ttf") format("truetype"); font-weight: 100 900; font-style: normal; font-display: swap; unicode-range: U+0030-0039, U+0023, U+0025, U+002B, U+002C, U+002E, U+002F, U+003A, U+0040; }
@@ -835,6 +837,38 @@
     .wl-step > .wl-step-in { overflow: hidden; min-height: 0; }
     .wl-step.on { grid-template-rows: 1fr; opacity: 1; transform: none; pointer-events: auto; }
     .wl-step.on > .wl-step-in { overflow: visible; }
+    /* ===== MOBILE (Instagram in-app) ===== */
+    html, body { overflow-x: clip; }
+    img, video { max-width: 100%; }
+    a, button, label, summary { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+    @media (max-width: 760px) {
+      .sec { padding-left: 20px !important; padding-right: 20px !important; }
+      .nav { gap: 8px; }
+      .nav-cta { padding: 10px 14px !important; font-size: 11px !important; letter-spacing: .04em; }
+      .lang-sw button { padding: 6px 8px !important; }
+      .hero-sub { font-size: clamp(30px, 9vw, 44px) !important; line-height: 1 !important; padding: 0 8px; }
+      .ap-video { min-height: 70svh !important; padding: 64px 20px !important; }
+      .ap-dnl { font-size: clamp(36px, 11.5vw, 64px) !important; }
+      .ap-verdict { font-size: clamp(38px, 12vw, 64px) !important; }
+      .ap-chair { aspect-ratio: 1 / 1; max-height: 70svh; }
+      .ap-res div { padding: 24px !important; }
+      .ap-res dt { font-size: 44px !important; }
+      .qx { padding: 28px 22px !important; border-radius: 22px; }
+      .qx-t { font-size: clamp(48px, 16vw, 80px) !important; }
+      .qx-chips { flex-wrap: wrap; }
+      .hq-card { padding: 24px !important; }
+      .mods-title, .hq-title { font-size: clamp(34px, 11vw, 60px) !important; }
+      .by { gap: 20px !important; flex-direction: column; align-items: flex-start; }
+      .by .who img, .by .who .av { width: 64px !important; height: 64px !important; }
+      #about { min-height: auto !important; padding-top: 96px !important; padding-bottom: 96px !important; }
+      .wl-opt span { min-height: 48px; }
+      .btn, .hero-btn, .wl-cta { min-height: 48px; }
+      .sheet { max-height: 100svh !important; overscroll-behavior: contain; }
+      .combo-list { max-height: 36svh !important; }
+      .combo-list li { padding: 13px 12px; }
+      footer.cap { flex-direction: column; align-items: center; gap: 14px !important; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) { .portal-bg, .about-photo img, .split-photo img { animation: none !important; } }
   </style>
   <script>document.documentElement.classList.add("js");</script>
 <script>window.POSTHOG_KEY = "phc_u4gX6nLBo4jYoRSVy8Cw829Xd5bKxY3a64ZGH3YacKXt"; window.POSTHOG_HOST = "https://eu.i.posthog.com";</script>
@@ -856,7 +890,7 @@
 
   <!-- HERO -->
   <section class="hero fp-hero" id="top">
-    <div class="fp-bg" aria-hidden="true"><img class="portal-bg" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/06.webp?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy8wNi53ZWJwIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzgwNjQxOSwiZXhwIjoxODI1MzQyNDE5fQ.23ldWwsq65C5lJC6V4tIYUv4CiA6CF0epsvFdFsPiXdITStqNpkBD659CbZt_UWiojA30V-ry7uxE8p5w7DtPA" alt="" decoding="async" /><img class="portal-bg ghost" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/06.webp?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy8wNi53ZWJwIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzgwNjQxOSwiZXhwIjoxODI1MzQyNDE5fQ.23ldWwsq65C5lJC6V4tIYUv4CiA6CF0epsvFdFsPiXdITStqNpkBD659CbZt_UWiojA30V-ry7uxE8p5w7DtPA" alt="" decoding="async" /><div class="portal-shade"></div></div>
+    <div class="fp-bg" aria-hidden="true"><img class="portal-bg" fetchpriority="high" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/06.webp?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy8wNi53ZWJwIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzgwNjQxOSwiZXhwIjoxODI1MzQyNDE5fQ.23ldWwsq65C5lJC6V4tIYUv4CiA6CF0epsvFdFsPiXdITStqNpkBD659CbZt_UWiojA30V-ry7uxE8p5w7DtPA" alt="" decoding="async" /><img class="portal-bg ghost" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/06.webp?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy8wNi53ZWJwIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MzgwNjQxOSwiZXhwIjoxODI1MzQyNDE5fQ.23ldWwsq65C5lJC6V4tIYUv4CiA6CF0epsvFdFsPiXdITStqNpkBD659CbZt_UWiojA30V-ry7uxE8p5w7DtPA" alt="" decoding="async" /><div class="portal-shade"></div></div>
     <div class="hero-center">
       <h1 class="fp-logo"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(11).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDExKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MzA3LCJleHAiOjE4MjY4NDAzMDd9.jzAYFBHKuRpI343Yr5RCim_5peoXXIF1b8gCTad617wye_vLyNse0Dvn7G0POVtv9rC_HWu9-Tohfc8OtJfcVQ" alt="The Chair 24" width="2000" height="2000" /></h1>
       <p class="fp-date">Spring 2027</p>
@@ -868,7 +902,7 @@
   <!-- INFO -->
   <section class="sec fp-info" id="info">
     <div class="sec-in">
-      <p class="fp-text rv"><span class="inl-logo"><img class="inline-logo" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(11).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDExKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MzA3LCJleHAiOjE4MjY4NDAzMDd9.jzAYFBHKuRpI343Yr5RCim_5peoXXIF1b8gCTad617wye_vLyNse0Dvn7G0POVtv9rC_HWu9-Tohfc8OtJfcVQ" alt="The Chair 24" width="2000" height="2000" /></span> is a 24-hour last-person-standing race, in the heart of the city. You run as many loops as you can, <span class="tm"><i>.</i>solo</span>, in <span class="tm"><i>.</i>duos</span> or in <span class="tm"><i>.</i>crews</span> of 4. It's competition, it's community, and it's your chance to go further than you ever have.</p>
+      <p class="fp-text rv"><span class="inl-logo"><img loading="lazy" decoding="async" class="inline-logo" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(11).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDExKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MzA3LCJleHAiOjE4MjY4NDAzMDd9.jzAYFBHKuRpI343Yr5RCim_5peoXXIF1b8gCTad617wye_vLyNse0Dvn7G0POVtv9rC_HWu9-Tohfc8OtJfcVQ" alt="The Chair 24" width="2000" height="2000" /></span> is a 24-hour last-person-standing race, in the heart of the city. You run as many loops as you can, <span class="tm"><i>.</i>solo</span>, in <span class="tm"><i>.</i>duos</span> or in <span class="tm"><i>.</i>crews</span> of 4. It's competition, it's community, and it's your chance to go further than you ever have.</p>
     </div>
   </section>
 
@@ -962,7 +996,7 @@
         <div class="qx-arrow" aria-hidden="true"><svg viewBox="0 0 64 24" fill="none" stroke="#fffe00" stroke-width="1.5" stroke-linecap="round"><path d="M2 12h58M50 3l10 9-10 9"/></svg></div>
         <div class="qx-r">
           <p class="qx-s">Qualify for</p>
-          <div class="qx-logo"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(10).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDEwKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MDUzLCJleHAiOjE4MjY4NDAwNTN9.phr0sY3dnq_rGTzSAnEKVglVuMDooITzqMrJOZkI3fc2sStpr38SxLlgd9FPIc1swgxGD-K08oCHwca1KLpFjA" alt="The Chair Backyard Ultra" width="2000" height="2000" /></div>
+          <div class="qx-logo"><img loading="lazy" decoding="async" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(10).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDEwKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MDUzLCJleHAiOjE4MjY4NDAwNTN9.phr0sY3dnq_rGTzSAnEKVglVuMDooITzqMrJOZkI3fc2sStpr38SxLlgd9FPIc1swgxGD-K08oCHwca1KLpFjA" alt="The Chair Backyard Ultra" width="2000" height="2000" /></div>
           <p class="qx-d">Fall 2027 · Lisbon</p>
         </div>
       </div>
@@ -975,7 +1009,7 @@
       <div class="sheet-head">
         <div>
           <div class="cap"><span class="tag">Waitlist</span></div>
-          <h3 id="wl-title" class="m-logo"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(11).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDExKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MzA3LCJleHAiOjE4MjY4NDAzMDd9.jzAYFBHKuRpI343Yr5RCim_5peoXXIF1b8gCTad617wye_vLyNse0Dvn7G0POVtv9rC_HWu9-Tohfc8OtJfcVQ" alt="The Chair 24 — Join the waitlist" /></h3>
+          <h3 id="wl-title" class="m-logo"><img loading="lazy" decoding="async" src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/the%20chair%20(11).png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy90aGUgY2hhaXIgKDExKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MzA0MzA3LCJleHAiOjE4MjY4NDAzMDd9.jzAYFBHKuRpI343Yr5RCim_5peoXXIF1b8gCTad617wye_vLyNse0Dvn7G0POVtv9rC_HWu9-Tohfc8OtJfcVQ" alt="The Chair 24 — Join the waitlist" /></h3>
         </div>
         <button class="x" id="wl-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
       </div>
@@ -1016,7 +1050,7 @@
           </select>
         </div>
         <div class="field combo" id="s-country-wrap">
-          <img class="cflag" id="s-country-flag" alt="" hidden />
+          <img loading="lazy" decoding="async" class="cflag" id="s-country-flag" alt="" hidden />
           <input type="text" id="s-country" name="country" placeholder="Search your country…" required autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="s-country-list" aria-label="Country" />
           <ul class="combo-list" id="s-country-list" role="listbox" hidden></ul>
         </div>
@@ -1082,8 +1116,8 @@
       locale: navigator.language || null,
     };
     async function saveLead(payload) {
-      const { error } = await supabase.from("leads").insert({ ...payload, ...context });
-      if (error) throw error;
+      const { error } = await supabase.from("waitlist24").insert({ ...payload, ...context });
+      if (error && error.code !== "23505") throw error; // 23505 = já inscrito → sucesso
     }
 
     // ---------- Autocomplete (país / distrito) ----------
@@ -1182,8 +1216,6 @@
       const [format, modality] = pick.value.split(":");
       const btn = $("#s-btn"); btn.disabled = true; err.style.display = "none";
       const lead = {
-        type: modality === "solo" ? "individual" : "team",
-        intent: "notify",
         email: emailEl.value.toLowerCase(),
         first_name: firstEl.value,
         last_name: lastEl.value,
@@ -1193,17 +1225,11 @@
         district,
         format,
         modality,
+        lang: window.LANG === "pt" ? "pt" : "en",
+        page: location.pathname.slice(0, 100),
       };
       try {
-        try { await saveLead(lead); }
-        catch (ex) {
-          // se as colunas novas ainda não existirem na BD (migração por aplicar), grava o resto em vez de falhar
-          if (ex && ex.code === "PGRST204") {
-            const { modality: _m, first_name: _f, last_name: _l, gender: _g, age_group: _a, country: _c, ...rest } = lead;
-            await saveLead(rest);
-          }
-          else throw ex;
-        }
+        await saveLead(lead);
         signup.style.display = "none";
         $("#s-done").style.display = "block";
       } catch (ex) {
