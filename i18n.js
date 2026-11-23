@@ -107,6 +107,7 @@
     "Male": "Masculino",
     "Prefer not to say": "Prefiro não dizer",
     "Age": "Idade",
+    "District": "Distrito",
     "<span>Sign up</span>": "<span>Inscrever</span>",
     "You're in.": "Estás dentro.",
     "Check your inbox. We'll be in touch before anyone else.": "Verifica o teu email. Vamos falar contigo antes de toda a gente.",

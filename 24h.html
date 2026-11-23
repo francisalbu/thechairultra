@@ -863,7 +863,8 @@
       .wl-opt span { min-height: 48px; }
       .btn, .hero-btn, .wl-cta { min-height: 48px; }
       .sheet { max-height: 100svh !important; overscroll-behavior: contain; }
-      .combo-list { max-height: 36svh !important; }
+      .combo-list { max-height: 34svh !important; }
+      #wl .combo-list { position: static !important; }
       .combo-list li { padding: 13px 12px; }
       footer.cap { flex-direction: column; align-items: center; gap: 14px !important; text-align: center; }
     }
@@ -930,7 +931,12 @@
       #wl .wl-step.on { animation: wlStep .5s var(--ease); }
     }
     @keyframes wlStep { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-  </style>
+  
+/* selects nativos (gender/age/district): picker iOS, sem zoom */
+#wl .field.sel select{font-size:16px!important;min-height:52px;-webkit-appearance:none;appearance:none}
+#wl .field.sel select:invalid{color:rgba(240,239,233,.5)}
+#wl .field.sel select option{background:#111;color:#f0efe9}
+</style>
   <script>document.documentElement.classList.add("js");</script>
 <script>window.POSTHOG_KEY = "phc_u4gX6nLBo4jYoRSVy8Cw829Xd5bKxY3a64ZGH3YacKXt"; window.POSTHOG_HOST = "https://eu.i.posthog.com";</script>
 <script src="/posthog-init.js" defer></script>
@@ -1124,9 +1130,30 @@
           <input type="text" id="s-country" name="country" placeholder="Search your country…" required autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="s-country-list" aria-label="Country" />
           <ul class="combo-list" id="s-country-list" role="listbox" hidden></ul>
         </div>
-        <div class="field combo" id="s-district-wrap" hidden>
-          <input type="text" id="s-district" name="district" placeholder="Search your district…" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="s-district-list" aria-label="District" />
-          <ul class="combo-list" id="s-district-list" role="listbox" hidden></ul>
+        <div class="field sel" id="s-district-wrap" hidden>
+          <select id="s-district" name="district" required aria-label="District">
+            <option value="" selected disabled>District</option>
+            <option value="Aveiro">Aveiro</option>
+            <option value="Beja">Beja</option>
+            <option value="Braga">Braga</option>
+            <option value="Bragança">Bragança</option>
+            <option value="Castelo Branco">Castelo Branco</option>
+            <option value="Coimbra">Coimbra</option>
+            <option value="Évora">Évora</option>
+            <option value="Faro">Faro</option>
+            <option value="Guarda">Guarda</option>
+            <option value="Leiria">Leiria</option>
+            <option value="Lisboa">Lisboa</option>
+            <option value="Portalegre">Portalegre</option>
+            <option value="Porto">Porto</option>
+            <option value="Santarém">Santarém</option>
+            <option value="Setúbal">Setúbal</option>
+            <option value="Viana do Castelo">Viana do Castelo</option>
+            <option value="Vila Real">Vila Real</option>
+            <option value="Viseu">Viseu</option>
+            <option value="Madeira">Madeira</option>
+            <option value="Açores">Açores</option>
+          </select>
         </div>
         <input type="text" id="s-hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
         <button type="submit" class="btn btn-solid" id="s-btn" style="margin-top:10px"><span>Sign up</span></button>
@@ -1258,7 +1285,6 @@
       if (!pt) { distEl.value = ""; distEl.setCustomValidity(""); }
     };
     combo(countryEl, $("#s-country-list"), COUNTRIES, togglePT, flagUrl);
-    combo(distEl, $("#s-district-list"), DISTRICTS);
 
     const signup = $("#signup");
     signup.addEventListener("reset", () => togglePT(null));
@@ -1280,7 +1306,7 @@
       let district = null;
       if (country === "Portugal") {
         district = match(DISTRICTS, distEl.value);
-        if (!district) { distEl.setCustomValidity("Choose a district from the list."); distEl.reportValidity(); return; }
+        if (!district) { distEl.reportValidity(); return; }
         distEl.value = district;
       }
       const [format, modality] = pick.value.split(":");
@@ -1409,7 +1435,7 @@
       
       f.addEventListener("focusin", function (e) {
         if (!e.target.matches("input, select")) return;
-        setTimeout(function () { var r = e.target.getBoundingClientRect(), sr = sheet.getBoundingClientRect(); var d = r.top - (sr.top + sr.height * 0.35); if (Math.abs(d) > 40) sheet.scrollTo({ top: sheet.scrollTop + d, behavior: "smooth" }); }, 320);
+        setTimeout(function () { var r = e.target.getBoundingClientRect(), sr = sheet.getBoundingClientRect(); var d = r.top - (sr.top + (e.target.closest(".combo") ? 96 : sr.height * 0.35)); if (Math.abs(d) > 40) sheet.scrollTo({ top: sheet.scrollTop + d, behavior: "smooth" }); }, 320);
       });
       // Enter → campo seguinte
       var order = ["s-first", "s-last", "s-email"];
