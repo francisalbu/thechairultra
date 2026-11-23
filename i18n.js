@@ -147,7 +147,7 @@
     "No time limit. The race goes on until only one runner remains.": "Sem limite de tempo. A corrida continua até restar apenas um atleta.",
     "How far will you go?": "Até onde vais?"
   };
-  var PH = { "First name": "Nome", "Last name": "Apelido", "Your email": "O teu email", "Country": "País", "District": "Distrito" };
+  var PH = { "First name": "Nome", "Last name": "Apelido", "Your email": "O teu email", "Search your country…": "Pesquisa o teu país…", "Search your district…": "Pesquisa o teu distrito…" };
 
   var SEL = "h1,h2,h3,h4,p,li,summary,a,button,option,legend,span,small,b";
   var norm = function (h) { return h.replace(/<img\b[^>]*>/g, "<img>").replace(/\s+/g, " ").trim(); };

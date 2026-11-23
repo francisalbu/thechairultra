@@ -811,6 +811,14 @@
     .ap-res div:nth-child(3)::before { content: "3/3"; }
     .ap-res dt { font-size: clamp(48px, 5.4vw, 88px) !important; line-height: 1; }
     .ap-res dd { font-size: clamp(15px, 1.3vw, 18px); line-height: 1.45; }
+    /* waitlist tag sem stroke */
+    .sheet .tag { border: 0 !important; padding: 0 !important; color: var(--mute) !important; letter-spacing: .28em; }
+    /* combos: lista em fluxo (não é cortada), campo com ícone de pesquisa */
+    .combo-list { position: static !important; max-height: 42vh !important; margin-top: 8px !important; }
+    .combo input { padding-left: 30px !important; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' stroke='%23f1f0ea' stroke-opacity='.6' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='8' cy='8' r='6'/%3E%3Cpath d='M17 17l-4.5-4.5'/%3E%3C/svg%3E") no-repeat 0 50% !important; }
+    .combo.has-flag input { padding-left: 34px !important; background-image: none !important; }
+    .combo input:focus { border-bottom-color: #fffe00; }
+    .by .who .av img { object-fit: cover; object-position: 50% 50% !important; transform: scale(3.4) !important; transform-origin: 59% 64% !important; }
   </style>
   <script>document.documentElement.classList.add("js");</script>
 <script src="/i18n.js" defer></script>
@@ -916,80 +924,6 @@
     </div>
   </section>
 
-  <!-- TWIST -->
-  <section class="tw" id="twist">
-    <div class="tw-in">
-      <h2 class="tw-title rv">Introducing the DNT.<small>(Did not try)</small></h2>
-
-      <div class="dnt rv">
-        <div class="dnt-g">
-        <button type="button" class="chair-bubble" id="chair-open" aria-label="See the chair">The chair</button>
-        <svg id="dnt-g" viewBox="0 0 240 350" fill="none" role="img" aria-label="Two ways to not try: stay at the base, or run ten meters past the start line and come back">
-          <defs>
-            <pattern id="h2" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#f1f0ea" stroke-opacity=".4" stroke-width="1"/></pattern>
-            <radialGradient id="g2"><stop offset="0" stop-color="#fffe00" stop-opacity=".95"/><stop offset=".35" stop-color="#fffe00" stop-opacity=".35"/><stop offset="1" stop-color="#fffe00" stop-opacity="0"/></radialGradient>
-            <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1f0ea" stop-opacity=".07"/><stop offset="1" stop-color="#f1f0ea" stop-opacity="0"/></linearGradient>
-            <rect id="bx" x="30" y="50" width="180" height="200" rx="3"/>
-            <path id="rt" d="M150 160 V38 C150 6 182 6 182 38 V160 C182 192 150 192 150 160 Z"/>
-          </defs>
-
-          <!-- box: soft fill + echo outlines -->
-          <use href="#bx" fill="url(#fade)"/>
-          <g stroke="#f1f0ea" stroke-width="1">
-            <use href="#bx" opacity=".04" transform="translate(120 50) scale(1.15) translate(-120 -50)"/>
-            <use href="#bx" opacity=".06" transform="translate(120 50) scale(1.12) translate(-120 -50)"/>
-            <use href="#bx" opacity=".09" transform="translate(120 50) scale(1.09) translate(-120 -50)"/>
-            <use href="#bx" opacity=".13" transform="translate(120 50) scale(1.06) translate(-120 -50)"/>
-            <use href="#bx" opacity=".2" transform="translate(120 50) scale(1.03) translate(-120 -50)"/>
-            <use href="#bx" opacity=".75"/>
-          </g>
-
-          <text x="120" y="236" text-anchor="middle" fill="#f1f0ea" fill-opacity=".22" font-size="13" letter-spacing="6">CORRAL</text>
-
-          <!-- start bar -->
-          <rect x="30" y="34" width="180" height="16" fill="url(#h2)" stroke="#f1f0ea" stroke-opacity=".5"/>
-          <line x1="30" y1="50" x2="210" y2="50" stroke="#fffe00" stroke-opacity=".5" stroke-width="1"/>
-          <text x="120" y="24" text-anchor="middle" fill="#f1f0ea" font-size="11" letter-spacing="4">START</text>
-
-          <!-- option 2: out and back (route + comet trail + dot) -->
-          <use href="#rt" stroke="#fffe00" stroke-opacity=".18" stroke-width="1"/>
-          <path d="M150 160 V38 C150 6 182 6 182 38 V160 C182 192 150 192 150 160 Z" pathLength="100" stroke="#fffe00" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 86" stroke-dashoffset="14">
-            <animate attributeName="stroke-dashoffset" values="14;-86" dur="6s" repeatCount="indefinite"/>
-          </path>
-          <g>
-            <animateMotion dur="6s" repeatCount="indefinite" rotate="0"><mpath href="#rt"/></animateMotion>
-            <circle r="24" fill="url(#g2)"/>
-            <circle r="4.5" fill="#fffe00"/>
-          </g>
-
-          <!-- option 1: stay at the base (outside the box) -->
-          <g>
-            <circle cx="120" cy="302" r="10" stroke="#fffe00" stroke-width="1" opacity="0"><animate attributeName="r" values="6;30" dur="3.2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".55;0" dur="3.2s" repeatCount="indefinite"/></circle>
-            <circle cx="120" cy="302" r="10" stroke="#fffe00" stroke-width="1" opacity="0"><animate attributeName="r" values="6;30" dur="3.2s" begin="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".55;0" dur="3.2s" begin="1.6s" repeatCount="indefinite"/></circle>
-            <circle cx="120" cy="302" r="22" fill="url(#g2)"/>
-            <circle cx="120" cy="302" r="4.5" fill="#fffe00"/>
-            <text x="120" y="342" text-anchor="middle" fill="#f1f0ea" font-size="10" letter-spacing="4">THE BASE</text>
-          </g>
-        </svg>
-        </div>
-        <div class="dnt-text">
-          <p class="if">If:</p>
-          <ul class="if-list">
-            <li>You stayed in the comfort of the base and didn't go to the corral.</li>
-            <li>You walked up to the corral, crossed the start line, did some meters and turned around.</li>
-          </ul>
-          <p class="dnt-line"><span>You didn't try.</span><span>So you will sit in our chair and receive a DNT.</span></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="chair-lb" id="chair-lb" role="dialog" aria-label="The chair">
-    <div class="pop">
-    <button type="button" id="chair-close" aria-label="Close">&times;</button>
-    <div class="pop-in"><img src="https://exxqaluncgpzbopeikdh.supabase.co/storage/v1/object/sign/files/magnific__have-the-img-6-with-an-instax-frame-of-the-im7-and__32558.png?token=eyJraWQiOiI1MmUzNDAxMS1jNDczLTRmMjctOWE1ZS03N2ZmNjhhMzQ3NTQiLCJhbGciOiJIUzUxMiJ9.eyJ1cmwiOiJmaWxlcy9tYWduaWZpY19faGF2ZS10aGUtaW1nLTYtd2l0aC1hbi1pbnN0YXgtZnJhbWUtb2YtdGhlLWltNy1hbmRfXzMyNTU4LnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTM4MDYwODYsImV4cCI6MTgyNTM0MjA4Nn0.CspCS-aF8MXe1n4rb-z9wVEUbGlCNSzAnenYJM_0d5HVYbGlYVy7l6hfN0BQ_tHS5ZKptZVEpunBDfi_U5h72Q" alt="The chair" decoding="async" /></div>
-    </div>
-  </div>
 
   <!-- LIMIT -->
   <section class="limit" id="limit">
@@ -1076,11 +1010,11 @@
         </div>
         <div class="field combo" id="s-country-wrap">
           <img class="cflag" id="s-country-flag" alt="" hidden />
-          <input type="text" id="s-country" name="country" placeholder="Country" required autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="s-country-list" aria-label="Country" />
+          <input type="text" id="s-country" name="country" placeholder="Search your country…" required autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="s-country-list" aria-label="Country" />
           <ul class="combo-list" id="s-country-list" role="listbox" hidden></ul>
         </div>
         <div class="field combo" id="s-district-wrap" hidden>
-          <input type="text" id="s-district" name="district" placeholder="District" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="s-district-list" aria-label="District" />
+          <input type="text" id="s-district" name="district" placeholder="Search your district…" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="s-district-list" aria-label="District" />
           <ul class="combo-list" id="s-district-list" role="listbox" hidden></ul>
         </div>
         <input type="text" id="s-hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
