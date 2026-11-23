@@ -31,7 +31,8 @@
       "<b>O The Chair é um projeto criado para redefinir as provas de resistência, desafiando os atletas a ir além daquilo que acreditam ser capazes.</b>",
     "We believe distance is more than the kilometres you can run. It is the gap between what you think you can achieve and what you can actually do when you refuse to quit.":
       "Acreditamos que a distância é mais do que os quilómetros que consegues correr. É o espaço entre aquilo que achas que consegues e aquilo que realmente fazes quando te recusas a desistir.",
-    "<b>That is the distance we want to redefine.</b>": "<b>É essa a distância que queremos redefinir.</b>",
+    "<b>That is the distance you will redefine.</b>": "<b>É essa a distância que vais redefinir.</b>",
+    "The concept": "O conceito",
 
     // DNT
     "Introducing the DNT.<small>(Did not try)</small>": "Apresentamos o DNT.<small>(Did not try)</small>",
